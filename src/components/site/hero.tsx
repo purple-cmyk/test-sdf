@@ -23,6 +23,7 @@ function Ticker() {
     "40 SPEAKERS",
     "6 LIVE TRACKS",
   ];
+
   return (
     <div className="relative w-full overflow-hidden border-y border-border/70 py-3">
       <div className="flex w-max animate-marquee-slow">
@@ -48,7 +49,12 @@ export function Hero() {
   const ref = useRef<HTMLDivElement>(null);
   const reduced = useReducedMotion();
   const [mounted, setMounted] = useState(false);
-  const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
+
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start start", "end start"],
+  });
+
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "22%"]);
   const opacity = useTransform(scrollYProgress, [0, 0.85], [1, 0]);
   const scale = useTransform(scrollYProgress, [0, 1], [1, 1.08]);
@@ -56,16 +62,27 @@ export function Hero() {
   useEffect(() => setMounted(true), []);
 
   return (
-    <div id="top" ref={ref} className="relative min-h-[100svh] w-full overflow-hidden">
-      {/* layered background */}
+    <div
+      id="top"
+      ref={ref}
+      className="relative min-h-[100svh] w-full overflow-hidden"
+    >
+      {/* Layered background */}
       <div aria-hidden className="absolute inset-0 mesh opacity-70" />
-      <div aria-hidden className="absolute inset-0 cyber-grid opacity-35 [mask-image:radial-gradient(70%_60%_at_50%_40%,black,transparent)]" />
+
+      <div
+        aria-hidden
+        className="absolute inset-0 cyber-grid opacity-35 [mask-image:radial-gradient(70%_60%_at_50%_40%,black,transparent)]"
+      />
+
       <div aria-hidden className="absolute inset-0 noise-overlay" />
+
       {mounted ? (
         <div aria-hidden className="absolute inset-0 opacity-35">
           <ParticleField />
         </div>
       ) : null}
+
       <div
         aria-hidden
         className="absolute -top-40 left-1/2 h-[520px] w-[1100px] -translate-x-1/2 rounded-full opacity-[0.20] blur-[70px]"
@@ -75,7 +92,7 @@ export function Hero() {
         }}
       />
 
-      {/* floating code fragments */}
+      {/* Floating code fragments */}
       {mounted && !reduced
         ? FRAGMENTS.map((f, i) => (
             <motion.span
@@ -86,8 +103,16 @@ export function Hero() {
                 left: `${8 + ((i * 11) % 84)}%`,
                 top: `${18 + ((i * 23) % 64)}%`,
               }}
-              animate={{ y: [0, -22, 0], opacity: [0.1, 0.35, 0.1] }}
-              transition={{ duration: 9 + i, repeat: Infinity, ease: "easeInOut", delay: i * 0.6 }}
+              animate={{
+                y: [0, -22, 0],
+                opacity: [0.1, 0.35, 0.1],
+              }}
+              transition={{
+                duration: 9 + i,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: i * 0.6,
+              }}
             >
               {f}
             </motion.span>
@@ -98,42 +123,82 @@ export function Hero() {
         style={reduced ? {} : { y, opacity, scale }}
         className="relative z-10 flex min-h-[100svh] flex-col items-center justify-center px-6 pt-32 pb-16 text-center"
       >
-
-        <h1 className="max-w-6xl font-display text-[clamp(2.6rem,10.5vw,9.5rem)] leading-[0.86] font-medium tracking-[-0.05em]">
-          <SplitWords text="DIGITAL FORENSICS" delay={0.25} stagger={0.08} />
-          <span className="block text-glow text-accent">
-            <SplitWords text="SOCIETY" delay={0.45} stagger={0.08} />
+        {/* Hero heading */}
+        <h1 className="max-w-6xl font-display font-medium tracking-[-0.05em]">
+          {/* DIGITAL FORENSICS */}
+          <span className="block whitespace-nowrap text-[clamp(1.8rem,6.5vw,6.5rem)] leading-[0.9]">
+            <SplitWords
+              text="DIGITAL FORENSICS"
+              delay={0.25}
+              stagger={0.08}
+            />
           </span>
 
-
+          {/* SOCIETY */}
+          <span className="block whitespace-nowrap text-[clamp(2rem,6.8vw,6.8rem)] leading-[0.9] text-glow text-accent">
+            <SplitWords
+              text="SOCIETY"
+              delay={0.45}
+              stagger={0.08}
+            />
+          </span>
         </h1>
 
+        {/* Description */}
         <motion.p
-          initial={{ opacity: 0, y: 18, filter: "blur(8px)" }}
-          animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-          transition={{ duration: 1.2, delay: 0.75, ease: [0.19, 1, 0.22, 1] }}
+          initial={{
+            opacity: 0,
+            y: 18,
+            filter: "blur(8px)",
+          }}
+          animate={{
+            opacity: 1,
+            y: 0,
+            filter: "blur(0px)",
+          }}
+          transition={{
+            duration: 1.2,
+            delay: 0.75,
+            ease: [0.19, 1, 0.22, 1],
+          }}
           className="mt-8 max-w-xl text-balance text-base leading-relaxed text-muted-foreground md:text-lg"
         >
-          Securing tomorrow. Empowering innovators. A collective of researchers,
-          builders and defenders advancing the practice of security.
+          Securing tomorrow. Empowering innovators. A collective of
+          researchers, builders and defenders advancing the practice of
+          security.
         </motion.p>
 
+        {/* Buttons */}
         <motion.div
-          initial={{ opacity: 0, y: 18 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.9, ease: [0.19, 1, 0.22, 1] }}
+          initial={{
+            opacity: 0,
+            y: 18,
+          }}
+          animate={{
+            opacity: 1,
+            y: 0,
+          }}
+          transition={{
+            duration: 1,
+            delay: 0.9,
+            ease: [0.19, 1, 0.22, 1],
+          }}
           className="mt-11 flex flex-col items-center gap-3 sm:flex-row"
         >
           <MagneticLink href="#join">
-            <Lock className="h-4 w-4" /> Join Society
+            <Lock className="h-4 w-4" />
+            Join Society
             <ArrowRight className="h-4 w-4 transition-transform duration-500 group-hover:translate-x-1" />
           </MagneticLink>
+
           <MagneticLink href="#conference" variant="ghost">
-            <Terminal className="h-4 w-4 text-accent" /> Register Conference
+            <Terminal className="h-4 w-4 text-accent" />
+            Register Conference
           </MagneticLink>
         </motion.div>
       </motion.div>
 
+      {/* Ticker */}
       <div className="absolute inset-x-0 bottom-0 z-10">
         <Ticker />
       </div>

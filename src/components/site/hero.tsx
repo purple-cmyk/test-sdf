@@ -98,23 +98,9 @@ export function Hero() {
         style={reduced ? {} : { y, opacity, scale }}
         className="relative z-10 flex min-h-[100svh] flex-col items-center justify-center px-6 pt-32 pb-16 text-center"
       >
-        <motion.div
-          initial={{ opacity: 0, y: 14 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.15, ease: [0.19, 1, 0.22, 1] }}
-          className="glass mb-10 flex items-center gap-3 rounded-full px-4 py-2"
-        >
-          <span className="relative flex h-1.5 w-1.5">
-            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-75" />
-            <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-accent" />
-          </span>
-          <span className="font-mono text-[10px] tracking-[0.28em] text-muted-foreground">
-            REGISTRATION OPEN — SENTINEL SUMMIT 2026
-          </span>
-        </motion.div>
 
         <h1 className="max-w-6xl font-display text-[clamp(2.6rem,10.5vw,9.5rem)] leading-[0.86] font-medium tracking-[-0.05em]">
-          <SplitWords text="CYBER SECURITY" delay={0.25} stagger={0.08} />
+          <SplitWords text="DIGITAL FORENSICS" delay={0.25} stagger={0.08} />
           <span className="block text-glow text-accent">
             <SplitWords text="SOCIETY" delay={0.45} stagger={0.08} />
           </span>

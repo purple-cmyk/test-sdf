@@ -41,7 +41,7 @@ export function Nav() {
         <a href="#top" className="group flex items-center gap-2.5" aria-label="Home">
           <ShieldHalf className="h-5 w-5 text-primary transition-transform duration-500 group-hover:rotate-[18deg]" />
           <span className="font-display text-sm font-medium tracking-[-0.02em]">
-            Cyber Security Society
+            Digital Forensics Society
           </span>
         </a>
 

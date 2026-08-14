@@ -722,15 +722,15 @@ No shortcuts.
 
 Generate production-ready code with clean architecture, reusable components, semantic HTML, modern React patterns, optimized assets, SEO metadata, dark-mode-first design, and polished visual details throughout.
 
-This project was built with [Lovable](https://lovable.dev).
+This project was built with Purple.
 
-## Build with Lovable
+## Build with Purple
 
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/4c30a72e-8597-4cda-bcfc-c5142067a328).
+Continue developing this project in your local editor or preferred workflow.
 
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
+- **Ship faster**: describe what you want to build and the app can evolve quickly.
+- **Stay in sync**: keep your changes committed straight to this repository.
+- **Full ownership**: this code is yours. Push to `main` on GitHub and keep your workflow under your control.
 
 ## Development
 

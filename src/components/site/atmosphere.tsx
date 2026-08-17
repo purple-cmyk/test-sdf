@@ -41,9 +41,9 @@ export function ScrollProgress() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
   return (
-    <div className="pointer-events-none fixed inset-x-0 top-0 z-[70] h-[2px]">
+    <div className="pointer-events-none fixed inset-x-0 top-0 z-[70] h-[2px] bg-slate-200">
       <div
-        className="h-full origin-left bg-[linear-gradient(90deg,var(--primary),var(--accent),var(--violet))]"
+        className="h-full origin-left bg-slate-900"
         style={{ transform: `scaleX(${p})` }}
       />
     </div>

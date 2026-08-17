@@ -68,56 +68,12 @@ export function Hero() {
       className="relative min-h-[100svh] w-full overflow-hidden"
     >
       {/* Layered background */}
-      <div aria-hidden className="absolute inset-0 mesh opacity-70" />
+      <div aria-hidden className="absolute inset-0 bg-slate-50" />
 
       <div
         aria-hidden
-        className="absolute inset-0 cyber-grid opacity-35 [mask-image:radial-gradient(70%_60%_at_50%_40%,black,transparent)]"
+        className="absolute inset-x-0 top-0 h-px bg-slate-200"
       />
-
-      <div aria-hidden className="absolute inset-0 noise-overlay" />
-
-      {mounted ? (
-        <div aria-hidden className="absolute inset-0 opacity-35">
-          <ParticleField />
-        </div>
-      ) : null}
-
-      <div
-        aria-hidden
-        className="absolute -top-40 left-1/2 h-[520px] w-[1100px] -translate-x-1/2 rounded-full opacity-[0.20] blur-[70px]"
-        style={{
-          background:
-            "conic-gradient(from 180deg, color-mix(in oklab,var(--primary) 20%,transparent), color-mix(in oklab,var(--violet) 20%,transparent), color-mix(in oklab,var(--accent) 15%,transparent), color-mix(in oklab,var(--primary) 20%,transparent))",
-        }}
-      />
-
-      {/* Floating code fragments */}
-      {mounted && !reduced
-        ? FRAGMENTS.map((f, i) => (
-            <motion.span
-              key={f}
-              aria-hidden
-              className="pointer-events-none absolute hidden font-mono text-[10px] tracking-widest text-primary/[0.18] md:block"
-              style={{
-                left: `${8 + ((i * 11) % 84)}%`,
-                top: `${18 + ((i * 23) % 64)}%`,
-              }}
-              animate={{
-                y: [0, -22, 0],
-                opacity: [0.1, 0.35, 0.1],
-              }}
-              transition={{
-                duration: 9 + i,
-                repeat: Infinity,
-                ease: "easeInOut",
-                delay: i * 0.6,
-              }}
-            >
-              {f}
-            </motion.span>
-          ))
-        : null}
 
       <motion.div
         style={reduced ? {} : { y, opacity, scale }}

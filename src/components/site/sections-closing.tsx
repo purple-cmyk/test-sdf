@@ -89,8 +89,7 @@ export function Join() {
         </h2>
         <Reveal delay={0.15}>
           <p className="mx-auto mt-7 max-w-lg text-base leading-relaxed text-muted-foreground md:text-lg">
-            Membership is free for students and open year round. Get lab access,
-            mentorship, CTF teams and a seat at every workshop we run.
+            Membership is free for students and open year round. Join a community that advances digital forensic research, mentors emerging talent, supports public-interest concerns, and helps translate findings into action with institutions and policymakers.
           </p>
         </Reveal>
         <Reveal delay={0.25}>

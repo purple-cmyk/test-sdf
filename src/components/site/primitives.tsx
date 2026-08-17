@@ -101,11 +101,9 @@ export function MagneticLink({
   };
 
   const styles = {
-    primary:
-      "bg-primary text-primary-foreground shadow-[var(--glow-primary)] hover:brightness-110",
-    accent: "bg-accent text-accent-foreground shadow-[var(--glow-accent)] hover:brightness-110",
-    ghost:
-      "text-foreground border border-border bg-[color-mix(in_oklab,oklch(1_0_0)_70%,transparent)] backdrop-blur-xl hover:border-primary/50",
+    primary: "bg-[#111827] text-white hover:bg-[#1f2937]",
+    accent: "bg-[#374151] text-white hover:bg-[#4b5563]",
+    ghost: "text-foreground border border-border bg-white hover:border-slate-300",
   }[variant];
 
   return (
@@ -117,7 +115,7 @@ export function MagneticLink({
       animate={{ x: pos.x, y: pos.y }}
       transition={{ type: "spring", stiffness: 220, damping: 18, mass: 0.4 }}
       className={cn(
-        "group relative inline-flex items-center gap-3 overflow-hidden rounded-full px-7 py-3.5 font-sans text-sm font-medium tracking-tight transition-[filter,border-color] duration-500",
+        "group relative inline-flex items-center gap-3 overflow-hidden rounded-full px-7 py-3.5 font-sans text-sm font-medium tracking-tight transition-colors duration-300",
         styles,
         className,
       )}
@@ -171,8 +169,8 @@ export function SectionHeading({
     >
       <Reveal>
         <div className="flex items-center gap-4">
-          <span className="font-mono text-[11px] tracking-[0.3em] text-primary">{index}</span>
-          <span className="h-px w-10 bg-primary/40" />
+          <span className="font-mono text-[11px] tracking-[0.3em] text-slate-500">{index}</span>
+          <span className="h-px w-8 bg-slate-300" />
           <span className="eyebrow">{eyebrow}</span>
         </div>
       </Reveal>

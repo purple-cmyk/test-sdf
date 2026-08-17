@@ -34,8 +34,8 @@ export function Nav() {
       <nav
         aria-label="Primary"
         className={cn(
-          "mx-auto flex w-[min(94vw,80rem)] items-center justify-between rounded-full px-5 py-3 transition-all duration-700 ease-[var(--ease-luxe)]",
-          scrolled ? "glass shadow-[var(--shadow-elevate)]" : "border border-transparent",
+          "mx-auto flex w-[min(94vw,80rem)] items-center justify-between rounded-full border border-slate-200 bg-white/90 px-5 py-3 transition-all duration-300",
+          scrolled ? "shadow-sm" : "border-transparent bg-transparent",
         )}
       >
         <a href="#top" className="group flex items-center gap-2.5" aria-label="Home">
@@ -89,7 +89,7 @@ export function Nav() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -12 }}
             transition={{ duration: 0.45, ease: [0.19, 1, 0.22, 1] }}
-            className="glass mx-auto mt-3 w-[min(94vw,80rem)] rounded-3xl p-5 lg:hidden"
+            className="mx-auto mt-3 w-[min(94vw,80rem)] rounded-3xl border border-slate-200 bg-white p-5 shadow-sm lg:hidden"
           >
             <ul className="flex flex-col">
               {links.map((l) => (

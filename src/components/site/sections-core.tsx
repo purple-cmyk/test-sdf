@@ -70,7 +70,7 @@ export function About() {
 }
 
 /* --------------------- SECTION 03 — CONFERENCE ------------------------ */
-const TARGET = new Date("2027-03-12T09:00:00Z").getTime();
+const TARGET = new Date("2027-01-03T09:00:00Z").getTime();
 
 function Countdown() {
   const [t, setT] = useState({ d: 0, h: 0, m: 0, s: 0 });
@@ -140,9 +140,9 @@ export function Conference() {
           <Reveal delay={0.2} className="mt-12">
             <dl className="grid gap-8 sm:grid-cols-3">
               {[
-                { icon: CalendarDays, label: "Date", value: "March 12–14, 2027" },
-                { icon: MapPin, label: "Venue", value: "Aurora Convention Centre" },
-                { icon: Sparkles, label: "Theme", value: "Trust, Rebuilt" },
+                { icon: CalendarDays, label: "Date", value: "3–5 Jan 2027" },
+                { icon: MapPin, label: "Venue", value: "Eros Hotel, Nehru Place" },
+                { icon: Sparkles, label: "Theme", value: "Digital Forensics" },
               ].map((d) => (
                 <div key={d.label}>
                   <dt className="flex items-center gap-2 font-mono text-[10px] tracking-[0.22em] text-muted-foreground">
@@ -169,29 +169,9 @@ export function Conference() {
               <Countdown />
             </div>
 
-            <div className="mt-9">
-              <p className="eyebrow">Agenda preview</p>
-              <ul className="mt-4">
-                {agenda.map((a, i) => (
-                  <motion.li
-                    key={a.time}
-                    initial={{ opacity: 0, x: -12 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.7, delay: i * 0.08, ease: [0.19, 1, 0.22, 1] }}
-                    className="group flex items-start gap-4 border-b border-border/70 py-3.5 last:border-0"
-                  >
-                    <span className="mt-0.5 font-mono text-[11px] text-primary">{a.time}</span>
-                    <span className="flex-1 text-sm leading-snug text-foreground/90 transition-colors group-hover:text-foreground">
-                      {a.title}
-                    </span>
-                    <span className="hidden font-mono text-[10px] tracking-[0.18em] text-muted-foreground sm:block">
-                      {a.tag.toUpperCase()}
-                    </span>
-                  </motion.li>
-                ))}
-              </ul>
-            </div>
+            <p className="mt-9 text-sm leading-relaxed text-muted-foreground">
+              Registration is now open for the SDF conference. Details will be shared closer to the event.
+            </p>
 
             <MagneticLink href="#join" variant="accent" className="mt-9 w-full justify-center">
               Register for the Conference

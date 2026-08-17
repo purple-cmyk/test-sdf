@@ -228,9 +228,9 @@ export function Footer() {
               <p className="eyebrow">Connect</p>
               <ul className="mt-5 flex flex-col gap-3">
                 <li className="text-sm text-muted-foreground">
-                  hello@cybersecuritysociety.org
+                  hello@sdfsociety.org
                 </li>
-                <li className="text-sm text-muted-foreground">Aurora Convention Centre</li>
+                <li className="text-sm text-muted-foreground">Eros Hotel, Nehru Place</li>
               </ul>
               <div className="mt-6 flex gap-2">
                 {[Twitter, Github, Linkedin].map((Icon, i) => (

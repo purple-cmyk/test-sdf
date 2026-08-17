@@ -17,11 +17,11 @@ const FRAGMENTS = [
 
 function Ticker() {
   const items = [
-    "SDF SUMMIT 2026",
-    "MARCH 12–14",
-    "AURORA CONVENTION CENTRE",
-    "40 SPEAKERS",
-    "6 LIVE TRACKS",
+    "SDF SUMMIT 2027",
+    "3–5 JAN",
+    "EROS HOTEL, NEHRU PLACE",
+    "DIGITAL FORENSICS",
+    "REGISTRATION OPEN",
   ];
 
   return (

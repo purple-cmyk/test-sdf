@@ -165,9 +165,9 @@ export function Workshops() {
     <Section id="workshops" className="border-y border-border/60 bg-surface/20">
       <SectionHeading
         index="06"
-        eyebrow="Workshops"
-        title="Training that leaves marks."
-        description="Small cohorts, real targets, no slides-only sessions. Bring a laptop and a willingness to break things."
+        eyebrow="Our Work"
+        title="Research, dialogue, and action."
+        description="Our society creates a bridge between researchers, institutions, startups, and government bodies—raising concerns, publishing work, and turning findings into practical impact."
       />
 
       <div className="mt-16 grid gap-4 md:grid-cols-2 lg:grid-cols-3">

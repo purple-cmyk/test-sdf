@@ -61,40 +61,40 @@ export const speakers = [
 
 export const workshops = [
   {
-    title: "Binary Exploitation",
-    level: "Advanced",
+    title: "Research & Publication Forum",
+    level: "Open to all",
     duration: "6 hrs",
-    desc: "Stack, heap and ROP chains against modern mitigations — hands-on with live targets.",
+    desc: "A platform for members and researchers to present findings, publish technical work, and discuss emerging digital forensic challenges.",
   },
   {
-    title: "Cloud Attack Paths",
-    level: "Intermediate",
+    title: "Industry–Government Dialogue",
+    level: "Policy-focused",
     duration: "4 hrs",
-    desc: "Identity pivoting across AWS, Azure and GCP. From misconfig to full tenant compromise.",
+    desc: "A direct channel for startups, professionals, and citizens to raise concerns and discuss digital evidence, cyber risk, and governance with relevant bodies.",
   },
   {
-    title: "Reverse Engineering",
+    title: "Case Review & Evidence Analysis",
     level: "Advanced",
     duration: "8 hrs",
-    desc: "Static and dynamic analysis of packed samples, anti-debug bypass and unpacking.",
+    desc: "Structured review of real-world forensic cases, investigative workflows, and digital evidence integrity practices.",
   },
   {
-    title: "Threat Hunting",
-    level: "Intermediate",
+    title: "Public Interest Cyber Concerns",
+    level: "Community",
     duration: "5 hrs",
-    desc: "Hypothesis-driven detection engineering with real telemetry from a live SOC.",
+    desc: "A forum to surface pressing issues affecting citizens, startups, and institutions and convert them into actionable recommendations.",
   },
   {
-    title: "Hardware Hacking",
-    level: "Beginner",
-    duration: "3 hrs",
-    desc: "UART, JTAG and glitching. Extract firmware from consumer devices on the bench.",
-  },
-  {
-    title: "Applied Cryptography",
+    title: "Forensics in Emerging Tech",
     level: "Intermediate",
+    duration: "3 hrs",
+    desc: "Exploration of AI, cloud, mobile, and digital ecosystems through the lens of investigation, trust, and accountability.",
+  },
+  {
+    title: "Research-to-Action Lab",
+    level: "Collaborative",
     duration: "4 hrs",
-    desc: "Padding oracles, key management failures and post-quantum migration strategy.",
+    desc: "Turning research insights into policy-aware, evidence-driven solutions for institutions, industry stakeholders, and public bodies.",
   },
 ];
 
@@ -116,15 +116,14 @@ export const agenda = [
 ];
 
 export const sponsors = [
-  "NORTHWIND",
-  "HELIX",
-  "MERIDIAN",
-  "OBSIDIAN",
-  "QUANTA",
-  "VERTEX",
-  "AEGIS",
-  "NULLSEC",
-  "IRONCLAD",
+  "CDAC",
+  "3RD EYE",
+  "GGQSR",
+  "MH SERVICES",
+  "SKILLSDA",
+  "CYETHACK SOLUTIONS",
+  "IDEFENCE",
+  "PELORUS FORENSIC CYBERTECH",
 ];
 
 export const testimonials = [

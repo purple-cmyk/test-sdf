@@ -4,10 +4,6 @@ import workshopImg from "@/assets/more/SAH00066.JPG";
 import keynote from "@/assets/more/SAH00071.JPG";
 import networking from "@/assets/more/SAH00078.JPG";
 import soc from "@/assets/more/SAH00091.JPG";
-import s1 from "@/assets/more/SAH00093.JPG";
-import s2 from "@/assets/more/SAH00094.JPG";
-import s3 from "@/assets/more/SAH00100.JPG";
-import s4 from "@/assets/more/SAH00116.JPG";
 
 export const images = { confStage, ctf, workshopImg, keynote, networking, soc };
 
@@ -30,35 +26,35 @@ export const stats = [
 
 export const speakers = [
   {
-    name: "Dr. Elena Vasquez",
-    role: "Principal Threat Researcher",
-    org: "Northwind Labs",
-    img: s1,
-    topic: "Adversarial ML at Scale",
+    name: "Dr. Gaurav Gupta",
+    role: "Scientist F",
+    org: "MeitY / Ministry of Electronics & Information Technology",
+    img: "/drgauravgupta.jpg",
+    topic: "Digital Evidence Analysis",
     accent: "primary" as const,
   },
   {
-    name: "Marcus Reid",
-    role: "Head of Offensive Security",
-    org: "Helix Systems",
-    img: s2,
-    topic: "Breaking Modern Supply Chains",
+    name: "MeitY Official",
+    role: "Advisor, Digital Forensics",
+    org: "Government Cyber Security Division",
+    img: "/1760891997456.jpg",
+    topic: "Cyber Policy & Forensics",
     accent: "accent" as const,
   },
   {
-    name: "Anika Rao",
-    role: "Independent Researcher",
-    org: "0xNULL Collective",
-    img: s3,
-    topic: "Firmware Implants in the Wild",
+    name: "Rushi Mehta",
+    role: "Forensic Research Lead",
+    org: "Digital Evidence Lab",
+    img: "/rushimehta.jpg",
+    topic: "Evidence Reconstruction",
     accent: "violet" as const,
   },
   {
-    name: "Daniel Okoye",
-    role: "Chief Information Security Officer",
-    org: "Meridian Bank",
-    img: s4,
-    topic: "Defending Critical Infrastructure",
+    name: "MeitY Representative",
+    role: "Cyber Security & Legal Response",
+    org: "Government Digital Forensics",
+    img: "/1760891997558.jpg",
+    topic: "Digital Evidence Standards",
     accent: "primary" as const,
   },
 ];

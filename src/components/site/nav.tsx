@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { Menu, X, ShieldHalf } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { MagneticLink } from "./primitives";
 import { cn } from "@/lib/utils";
 
@@ -39,8 +39,12 @@ export function Nav() {
         )}
       >
         <a href="#top" className="group flex items-center gap-2.5" aria-label="Home">
-          <ShieldHalf className="h-5 w-5 text-primary transition-transform duration-500 group-hover:rotate-[18deg]" />
-          <span className="font-display text-sm font-medium tracking-[-0.02em]">
+          <img
+            src="/sdf.png"
+            alt="SDF logo"
+            className="h-10 w-10 rounded-full object-cover transition-transform duration-500 group-hover:scale-105 sm:h-12 sm:w-12"
+          />
+          <span className="font-display text-sm font-medium tracking-[-0.02em] sm:text-base">
             SDF • Society of Digital Forensics
           </span>
         </a>

@@ -1,13 +1,13 @@
-import confStage from "@/assets/conf-stage.jpg";
-import ctf from "@/assets/ctf.jpg";
-import workshopImg from "@/assets/workshop.jpg";
-import keynote from "@/assets/keynote.jpg";
-import networking from "@/assets/networking.jpg";
-import soc from "@/assets/soc.jpg";
-import s1 from "@/assets/speaker-1.jpg";
-import s2 from "@/assets/speaker-2.jpg";
-import s3 from "@/assets/speaker-3.jpg";
-import s4 from "@/assets/speaker-4.jpg";
+import confStage from "@/assets/more/SAH00050.JPG";
+import ctf from "@/assets/more/SAH00062.JPG";
+import workshopImg from "@/assets/more/SAH00066.JPG";
+import keynote from "@/assets/more/SAH00071.JPG";
+import networking from "@/assets/more/SAH00078.JPG";
+import soc from "@/assets/more/SAH00091.JPG";
+import s1 from "@/assets/more/SAH00093.JPG";
+import s2 from "@/assets/more/SAH00094.JPG";
+import s3 from "@/assets/more/SAH00100.JPG";
+import s4 from "@/assets/more/SAH00116.JPG";
 
 export const images = { confStage, ctf, workshopImg, keynote, networking, soc };
 
@@ -108,7 +108,7 @@ export const timeline = [
   { year: "2019", title: "Conference Launched", desc: "400 attendees at our inaugural annual summit." },
   { year: "2022", title: "Research Division", desc: "Nine CVEs published across IoT and automotive stacks." },
   { year: "2024", title: "Global Chapters", desc: "Sister chapters opened across three continents." },
-  { year: "2026", title: "SENTINEL Summit", desc: "Our largest edition yet — 2,000 seats, 40 speakers." },
+  { year: "2026", title: "SDF Summit", desc: "Our largest edition yet — 2,000 seats, 40 speakers." },
 ];
 
 export const agenda = [

@@ -118,7 +118,7 @@ export function Conference() {
       <div className="absolute inset-0">
         <img
           src={images.confStage}
-          alt="Sentinel Summit main stage"
+          alt="SDF Summit main stage"
           loading="lazy"
           width={1600}
           height={1000}
@@ -133,7 +133,7 @@ export function Conference() {
           <SectionHeading
             index="03"
             eyebrow="Annual Conference"
-            title="SENTINEL SUMMIT 2027"
+            title="SDF SUMMIT 2027"
             description="Three days of original research, adversarial simulation and hands-on training — under one roof, with the people actually doing the work."
           />
 
@@ -204,74 +204,3 @@ export function Conference() {
   );
 }
 
-/* ---------------------- SECTION 07 — TIMELINE ------------------------- */
-export function Timeline() {
-  const reduced = useReducedMotion();
-  return (
-    <Section id="timeline">
-      <SectionHeading
-        index="07"
-        eyebrow="Trajectory"
-        title="Twelve years, one obsession."
-      />
-      <div className="relative mt-20 pl-10 md:pl-0">
-        <div
-          aria-hidden
-          className="absolute top-0 bottom-0 left-[7px] w-px bg-border md:left-1/2"
-        />
-        <motion.div
-          aria-hidden
-          initial={reduced ? {} : { scaleY: 0 }}
-          whileInView={{ scaleY: 1 }}
-          viewport={{ once: true, margin: "-20%" }}
-          transition={{ duration: 2.2, ease: [0.19, 1, 0.22, 1] }}
-          className="absolute top-0 bottom-0 left-[7px] w-px origin-top bg-[linear-gradient(to_bottom,var(--primary),var(--accent),var(--violet))] md:left-1/2"
-        />
-        <ul className="flex flex-col gap-10 md:gap-14">
-          {timeline.map((item, i) => (
-            <li
-              key={item.year}
-              className={`relative md:w-1/2 ${i % 2 ? "md:ml-auto md:pl-16" : "md:pr-16"}`}
-            >
-              <span
-                aria-hidden
-                className={`absolute top-8 -left-[calc(2.5rem-3px)] grid h-4 w-4 place-items-center rounded-full border border-primary/40 bg-background md:left-auto ${
-                  i % 2 ? "md:-left-2" : "md:-right-2"
-                }`}
-              >
-                <span className="h-1.5 w-1.5 rounded-full bg-primary shadow-[0_0_14px_var(--primary)]" />
-              </span>
-              <Reveal delay={i * 0.05}>
-                <article
-                  className={`group relative overflow-hidden rounded-3xl border border-border bg-card/50 p-7 backdrop-blur-lg transition-[transform,box-shadow,border-color] duration-700 ease-[var(--ease-luxe)] hover:-translate-y-1.5 hover:border-primary/40 hover:shadow-[var(--shadow-elevate)] md:p-8 ${
-                    i % 2 ? "" : "md:text-right"
-                  }`}
-                >
-                  <div
-                    aria-hidden
-                    className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-700 group-hover:opacity-100 bg-[radial-gradient(120%_100%_at_50%_0%,color-mix(in_oklab,var(--primary)_7%,transparent),transparent_70%)]"
-                  />
-                  <div
-                    className={`relative flex items-center gap-3 ${i % 2 ? "" : "md:justify-end"}`}
-                  >
-                    <span className="rounded-full border border-primary/25 bg-primary/8 px-3 py-1 font-mono text-[11px] tracking-[0.24em] text-primary">
-                      {item.year}
-                    </span>
-                    <span className="h-px flex-1 bg-border" />
-                  </div>
-                  <h3 className="relative mt-4 font-display text-2xl font-medium tracking-tight md:text-[1.75rem]">
-                    {item.title}
-                  </h3>
-                  <p className="relative mt-3 text-sm leading-relaxed text-muted-foreground">
-                    {item.desc}
-                  </p>
-                </article>
-              </Reveal>
-            </li>
-          ))}
-        </ul>
-      </div>
-
-    </Section>
-  );
-}

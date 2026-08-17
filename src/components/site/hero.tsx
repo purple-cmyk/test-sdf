@@ -17,7 +17,7 @@ const FRAGMENTS = [
 
 function Ticker() {
   const items = [
-    "SENTINEL SUMMIT 2026",
+    "SDF SUMMIT 2026",
     "MARCH 12–14",
     "AURORA CONVENTION CENTRE",
     "40 SPEAKERS",

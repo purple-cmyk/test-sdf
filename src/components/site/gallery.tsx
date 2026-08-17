@@ -1,6 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, FreeMode } from "swiper/modules";
-import { MapPin } from "lucide-react";
 import "swiper/css";
 import "swiper/css/free-mode";
 import { gallery } from "./data";
@@ -10,7 +9,7 @@ export function CinematicGallery() {
     <section aria-label="Last year's conference" className="relative py-20 md:py-28">
       <div className="mx-auto mb-10 flex w-[min(94vw,80rem)] items-end justify-between gap-6 px-1">
         <div>
-          <p className="eyebrow">Sentinel Summit — Archive</p>
+          <p className="eyebrow">ICDF International Conference on Digital Forensics</p>
           <h2 className="mt-3 font-display text-[clamp(1.5rem,3vw,2.4rem)] leading-tight font-medium">
             Last year, in frames.
           </h2>
@@ -48,18 +47,6 @@ export function CinematicGallery() {
                 draggable={false}
               />
               <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_top,color-mix(in_oklab,var(--background)_92%,transparent),transparent_55%)]" />
-              <figcaption className="absolute inset-x-4 bottom-4 flex items-end justify-between gap-4">
-                <div className="glass rounded-sm px-4 py-3">
-                  <p className="font-display text-sm font-medium tracking-tight">{item.title}</p>
-                  <p className="mt-1 flex items-center gap-1.5 font-mono text-[10px] tracking-[0.18em] text-muted-foreground">
-                    <MapPin className="h-3 w-3 text-primary" />
-                    {item.location.toUpperCase()}
-                  </p>
-                </div>
-                <span className="glass rounded-sm px-3 py-2 font-mono text-[10px] tracking-[0.2em] text-primary">
-                  {item.year}
-                </span>
-              </figcaption>
             </figure>
           </SwiperSlide>
         ))}

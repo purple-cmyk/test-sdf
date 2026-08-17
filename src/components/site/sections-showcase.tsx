@@ -43,12 +43,6 @@ export function Highlights() {
                 className="h-full w-full object-cover brightness-[0.75] transition-[transform,filter] duration-[1300ms] ease-[var(--ease-luxe)] group-hover:scale-[1.09] group-hover:brightness-100"
               />
               <div className="absolute inset-0 bg-[linear-gradient(to_top,color-mix(in_oklab,var(--background)_70%,transparent),transparent_60%)]" />
-              <div className="absolute inset-x-5 bottom-5 translate-y-2 opacity-0 transition-all duration-700 ease-[var(--ease-luxe)] group-hover:translate-y-0 group-hover:opacity-100">
-                <p className="font-display text-base font-medium tracking-tight">{g.title}</p>
-                <p className="mt-1 font-mono text-[10px] tracking-[0.2em] text-primary">
-                  {g.location.toUpperCase()} — {g.year}
-                </p>
-              </div>
               <span className="absolute inset-0 border border-primary/0 transition-colors duration-700 group-hover:border-primary/40" />
             </button>
           </Reveal>
@@ -88,11 +82,8 @@ export function Highlights() {
                 alt={gallery[active]!.title}
                 className="max-h-[70vh] w-full object-cover"
               />
-              <figcaption className="glass flex items-center justify-between px-5 py-4">
+              <figcaption className="glass px-5 py-4">
                 <span className="font-display text-sm">{gallery[active]!.title}</span>
-                <span className="font-mono text-[10px] tracking-[0.2em] text-primary">
-                  {gallery[active]!.location.toUpperCase()} — {gallery[active]!.year}
-                </span>
               </figcaption>
             </motion.figure>
           </motion.div>

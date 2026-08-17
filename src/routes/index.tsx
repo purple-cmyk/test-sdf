@@ -3,13 +3,13 @@ import { MouseGlow, ScrollProgress, SmoothScroll } from "@/components/site/atmos
 import { Nav } from "@/components/site/nav";
 import { Hero } from "@/components/site/hero";
 import { CinematicGallery } from "@/components/site/gallery";
-import { About, Conference, Timeline } from "@/components/site/sections-core";
+import { About, Conference } from "@/components/site/sections-core";
 import { Highlights, Speakers, Workshops } from "@/components/site/sections-showcase";
 import { Faq, Footer, Join, Sponsors, Testimonials } from "@/components/site/sections-closing";
 
-const title = "Cyber Security Society — Sentinel Summit 2027";
+const title = "SDF Society of Digital Forensics — SDF Summit 2027";
 const description =
-  "An elite collective of security researchers, engineers and students. Join the society, register for Sentinel Summit 2027, and train with the people defending what matters.";
+  "The Society of Digital Forensics brings together researchers, practitioners and students working at the frontier of forensic investigation, incident response and digital evidence.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -40,7 +40,6 @@ function Index() {
         <Highlights />
         <Speakers />
         <Workshops />
-        <Timeline />
         <Sponsors />
         <Testimonials />
         <Join />

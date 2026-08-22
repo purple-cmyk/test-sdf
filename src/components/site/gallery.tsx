@@ -6,7 +6,7 @@ import { gallery } from "./data";
 
 export function CinematicGallery() {
   return (
-    <section aria-label="Last year's conference" className="relative py-20 md:py-28">
+    <section id="past-conferences" aria-label="Last year's conference" className="relative py-20 md:py-28">
       <div className="mx-auto mb-10 flex w-[min(94vw,80rem)] items-end justify-between gap-6 px-1">
         <div>
           <p className="eyebrow">ICDF International Conference on Digital Forensics</p>

@@ -21,7 +21,7 @@ function Ticker() {
     "3–5 JAN",
     "EROS HOTEL, NEHRU PLACE",
     "DIGITAL FORENSICS",
-    "REGISTRATION OPEN",
+    "PAST CONFERENCES",
   ];
 
   return (
@@ -82,7 +82,7 @@ export function Hero() {
         {/* Hero heading */}
         <h1 className="max-w-6xl font-display font-medium tracking-[-0.05em]">
           {/* DIGITAL FORENSICS */}
-          <span className="block whitespace-nowrap text-[clamp(1.8rem,6.5vw,6.5rem)] leading-[0.9]">
+          <span className="block whitespace-normal text-[clamp(2.1rem,9vw,6.5rem)] leading-[0.9] sm:whitespace-nowrap">
             <SplitWords
               text="DIGITAL FORENSICS"
               delay={0.25}
@@ -91,7 +91,7 @@ export function Hero() {
           </span>
 
           {/* SOCIETY */}
-          <span className="block whitespace-nowrap text-[clamp(2rem,6.8vw,6.8rem)] leading-[0.9] text-glow text-accent">
+          <span className="mt-2 block whitespace-normal text-[clamp(2.4rem,10vw,6.8rem)] leading-[0.9] text-glow text-accent sm:mt-0 sm:whitespace-nowrap">
             <SplitWords
               text="SOCIETY"
               delay={0.45}
@@ -139,17 +139,17 @@ export function Hero() {
             delay: 0.9,
             ease: [0.19, 1, 0.22, 1],
           }}
-          className="mt-11 flex flex-col items-center gap-3 sm:flex-row"
+          className="mt-11 flex w-full max-w-md flex-col items-stretch gap-3 sm:max-w-none sm:flex-row sm:justify-center"
         >
-          <MagneticLink href="#join">
+          <MagneticLink href="#join" className="w-full justify-center sm:w-auto">
             <Lock className="h-4 w-4" />
             Join Society
             <ArrowRight className="h-4 w-4 transition-transform duration-500 group-hover:translate-x-1" />
           </MagneticLink>
 
-          <MagneticLink href="#conference" variant="ghost">
+          <MagneticLink href="#past-conferences" variant="ghost" className="w-full justify-center sm:w-auto">
             <Terminal className="h-4 w-4 text-accent" />
-            Register Conference
+            View past conferences
           </MagneticLink>
         </motion.div>
       </motion.div>

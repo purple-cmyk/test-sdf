@@ -158,22 +158,23 @@ export function Conference() {
         </div>
 
         <Reveal delay={0.15}>
-          <div className="glass relative rounded-sm p-7 shadow-none md:p-9">
+          <div className="glass relative rounded-sm p-6 shadow-none md:p-9">
             <div
               aria-hidden
               className="absolute inset-x-8 -top-px h-px bg-[var(--gradient-line)]"
             />
-            <p className="eyebrow">Doors open in</p>
-            <div className="mt-5">
-              <Countdown />
+            <p className="eyebrow">Past editions</p>
+            <div className="mt-5 space-y-4">
+              <p className="font-display text-2xl leading-tight tracking-tight sm:text-3xl">
+                A snapshot of the work, the people, and the moments that shaped the community.
+              </p>
+              <p className="text-sm leading-relaxed text-muted-foreground">
+                Explore the keynotes, labs, CTF battles, and hands-on sessions from previous years.
+              </p>
             </div>
 
-            <p className="mt-9 text-sm leading-relaxed text-muted-foreground">
-              Registration is now open for the SDF conference. Details will be shared closer to the event.
-            </p>
-
-            <MagneticLink href="#join" variant="accent" className="mt-9 w-full justify-center">
-              Register for the Conference
+            <MagneticLink href="#past-conferences" variant="accent" className="mt-8 w-full justify-center">
+              View past conferences
               <ArrowUpRight className="h-4 w-4 transition-transform duration-500 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </MagneticLink>
           </div>

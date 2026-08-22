@@ -7,10 +7,9 @@ import { cn } from "@/lib/utils";
 const links = [
   { href: "#about", label: "Society" },
   { href: "#conference", label: "Conference" },
+  { href: "#past-conferences", label: "Past Conferences" },
   { href: "#speakers", label: "Speakers" },
   { href: "#workshops", label: "Workshops" },
-  { href: "#sponsors", label: "Sponsors" },
-  { href: "#join", label: "Contact" },
 ];
 
 export function Nav() {
@@ -44,8 +43,8 @@ export function Nav() {
             alt="SDF logo"
             className="h-10 w-10 rounded-full object-cover transition-transform duration-500 group-hover:scale-105 sm:h-12 sm:w-12"
           />
-          <span className="font-display text-sm font-medium tracking-[-0.02em] sm:text-base">
-            SDF • Society of Digital Forensics
+          <span className="font-display text-[11px] font-medium tracking-[-0.02em] sm:text-sm md:text-base">
+            <span className="hidden sm:inline">SDF • </span>Digital Forensics
           </span>
         </a>
 
@@ -65,10 +64,10 @@ export function Nav() {
 
         <div className="flex items-center gap-2">
           <MagneticLink
-            href="#conference"
+            href="#join"
             className="hidden px-5 py-2.5 text-[13px] sm:inline-flex"
           >
-            Register
+            Contact
           </MagneticLink>
           <button
             type="button"

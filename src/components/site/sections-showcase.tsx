@@ -21,8 +21,8 @@ export function Highlights() {
       <SectionHeading
         index="04"
         eyebrow="Highlights"
-        title="Moments from the floor."
-        description="Every frame from the last edition — keynotes, labs, and the small hours of the CTF."
+        title="Moments from the gathering."
+        description="Every frame from the last edition — keynotes, conversations, and the research moments that shaped the room."
       />
 
       <div className="mt-16 grid auto-rows-[220px] grid-cols-1 gap-3 md:grid-cols-3 lg:auto-rows-[260px] lg:grid-cols-4">

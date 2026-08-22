@@ -13,21 +13,9 @@ export function About() {
           <SectionHeading
             index="02"
             eyebrow="The Society"
-            title="A decade of defending what matters."
-            description="We are a member-run collective of security researchers, engineers and students. We publish original research, run open training, and build the pipeline of practitioners the industry keeps hiring from."
+            title="A gathering for researchers, leaders, and public-interest security."
+            description="We are a member-led collective bringing together researchers, industry leaders, and policy-minded practitioners to discuss the most important questions shaping digital trust, evidence, and accountability."
           />
-          <Reveal delay={0.2} className="mt-12">
-            <div className="flex flex-wrap gap-3">
-              {["Research", "Training", "CTF", "Disclosure", "Mentorship", "Policy"].map((t) => (
-                <span
-                  key={t}
-                  className="rounded-full border border-border px-4 py-2 font-mono text-[10px] tracking-[0.2em] text-muted-foreground transition-colors duration-500 hover:border-primary/60 hover:text-foreground"
-                >
-                  {t.toUpperCase()}
-                </span>
-              ))}
-            </div>
-          </Reveal>
         </div>
 
         <div className="relative">
@@ -39,30 +27,30 @@ export function About() {
                 "radial-gradient(circle, color-mix(in oklab,var(--violet) 15%,transparent), transparent 70%)",
             }}
           />
-          <ul className="grid gap-px overflow-hidden rounded-sm border border-border bg-border sm:grid-cols-2">
-            {stats.map((s, i) => (
-              <li
-                key={s.label}
-                className="group relative bg-background p-8 transition-colors duration-700 hover:bg-surface/70"
-              >
-                <Reveal delay={i * 0.07}>
-                  <p className="font-display text-[clamp(2rem,4.6vw,3.2rem)] leading-none font-medium tracking-[-0.05em] text-foreground">
-                    <Counter value={s.value} suffix={s.suffix} />
-                  </p>
-                  <p className="mt-3 font-mono text-[10px] tracking-[0.22em] text-muted-foreground">
-                    {s.label.toUpperCase()}
-                  </p>
-                </Reveal>
-                <span className="absolute inset-x-0 bottom-0 h-px scale-x-0 bg-[var(--gradient-line)] transition-transform duration-700 ease-[var(--ease-luxe)] group-hover:scale-x-100" />
-              </li>
-            ))}
-            <li className="relative hidden bg-background p-8 sm:block">
-              <Sparkles className="h-5 w-5 animate-floaty text-accent" />
-              <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-                Independent. Non-profit. Member funded.
+          <div className="rounded-sm border border-border bg-background p-7 sm:p-8">
+            <p className="eyebrow">Mission</p>
+            <p className="mt-5 text-base leading-relaxed text-foreground/90 sm:text-lg">
+              We aim to be a bridge between technical practitioners, industry leaders, and policymakers — bringing real-world security challenges into open conversation and action. The Society exists to connect deep technical understanding with public accountability, so that what is learned in the field can help shape stronger, safer systems for everyone.
+            </p>
+
+            <div className="mt-8 border-t border-border pt-6">
+              <p className="font-mono text-[10px] tracking-[0.22em] text-muted-foreground">
+                CHAIRMAN
               </p>
-            </li>
-          </ul>
+              <h3 className="mt-3 font-display text-2xl font-medium tracking-tight text-foreground">
+                Gaurav Gupta
+              </h3>
+              <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+                Under his leadership, the Society focuses on building an ecosystem where research, mentorship, and responsible innovation move together. His vision is to cultivate a community that learns deeply, thinks critically, and helps shape a more secure digital future.
+              </p>
+            </div>
+
+            <div className="mt-8 rounded-sm border border-border bg-surface/30 p-5">
+              <p className="text-sm leading-relaxed text-muted-foreground">
+                The goal is not only to advance technical capability, but also to translate that capability into conversations that matter beyond the lab.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </Section>
@@ -169,7 +157,7 @@ export function Conference() {
                 A snapshot of the work, the people, and the moments that shaped the community.
               </p>
               <p className="text-sm leading-relaxed text-muted-foreground">
-                Explore the keynotes, labs, CTF battles, and hands-on sessions from previous years.
+                Explore the keynotes, research conversations, and leadership discussions from previous years.
               </p>
             </div>
 

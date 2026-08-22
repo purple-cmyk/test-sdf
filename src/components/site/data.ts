@@ -9,11 +9,11 @@ export const images = { confStage, ctf, workshopImg, keynote, networking, soc };
 
 export const gallery = [
   { src: confStage, title: "Opening Keynote", location: "Grand Hall", year: "2025" },
-  { src: ctf, title: "Midnight CTF Finals", location: "Lab 04", year: "2025" },
-  { src: workshopImg, title: "Red Team Bootcamp", location: "Studio B", year: "2025" },
-  { src: keynote, title: "Zero Trust Deep Dive", location: "Main Stage", year: "2025" },
-  { src: networking, title: "Nightfall Networking", location: "Atrium", year: "2025" },
-  { src: soc, title: "Live SOC Simulation", location: "Ops Center", year: "2025" },
+  { src: ctf, title: "Research Exchange", location: "Forum Hall", year: "2025" },
+  { src: workshopImg, title: "Leadership Dialogue", location: "Studio B", year: "2025" },
+  { src: keynote, title: "Evidence and Trust", location: "Main Stage", year: "2025" },
+  { src: networking, title: "Networking Roundtable", location: "Atrium", year: "2025" },
+  { src: soc, title: "Public Interest Session", location: "Ops Center", year: "2025" },
 ];
 
 export const stats = [
@@ -99,20 +99,20 @@ export const workshops = [
 ];
 
 export const timeline = [
-  { year: "2014", title: "Founded", desc: "Twelve students, one lab, a single soldering iron." },
-  { year: "2017", title: "First National CTF Win", desc: "Top of the leaderboard at the national collegiate finals." },
-  { year: "2019", title: "Conference Launched", desc: "400 attendees at our inaugural annual summit." },
-  { year: "2022", title: "Research Division", desc: "Nine CVEs published across IoT and automotive stacks." },
-  { year: "2024", title: "Global Chapters", desc: "Sister chapters opened across three continents." },
-  { year: "2026", title: "SDF Summit", desc: "Our largest edition yet — 2,000 seats, 40 speakers." },
+  { year: "2014", title: "Founded", desc: "A shared effort to bring security research, practice, and public-interest dialogue together." },
+  { year: "2017", title: "Research Focus", desc: "A stronger emphasis on evidence-driven inquiry and applied digital forensics." },
+  { year: "2019", title: "Conference Launched", desc: "An annual gathering of researchers, industry voices, and policy-minded practitioners." },
+  { year: "2022", title: "Policy Engagement", desc: "Greater attention to governance, accountability, and the practical use of security research." },
+  { year: "2024", title: "Leadership Dialogue", desc: "Expanded conversations across institutions, researchers, and technology leaders." },
+  { year: "2026", title: "SDF Summit", desc: "A high-level research and industry gathering focused on digital trust and public-interest security." },
 ];
 
 export const agenda = [
-  { time: "09:00", title: "Registration & Secure Check-in", tag: "Atrium" },
+  { time: "09:00", title: "Registration & Welcome", tag: "Atrium" },
   { time: "10:00", title: "Opening Keynote — The Next Decade of Defense", tag: "Main Stage" },
-  { time: "12:30", title: "Parallel Workshop Tracks", tag: "Labs 01–06" },
-  { time: "15:00", title: "Live Red vs Blue Exercise", tag: "Ops Center" },
-  { time: "19:00", title: "Midnight CTF Finals", tag: "Grand Hall" },
+  { time: "12:30", title: "Research & Policy Roundtables", tag: "Forum Hall" },
+  { time: "15:00", title: "Industry & Research Conversations", tag: "Ops Center" },
+  { time: "19:00", title: "Leadership Networking Session", tag: "Grand Hall" },
 ];
 
 export const sponsors = [
@@ -129,25 +129,25 @@ export const sponsors = [
 export const testimonials = [
   {
     quote:
-      "The most technically honest conference I attend. No vendor theatre — just deep, careful work presented by people who actually ship defenses.",
+      "The most intellectually honest gathering I attend. It brings together the people doing the work and the people shaping the conversation around it.",
     name: "Priya Menon",
     role: "Security Architect, Quanta",
   },
   {
     quote:
-      "I joined as a first-year with zero experience. Three years later I'm doing incident response full time. The society built that path for me.",
+      "What stands out is the quality of discussion. It is serious, practical, and grounded in real problems rather than buzzwords.",
     name: "Tom Bergström",
     role: "IR Analyst, Obsidian",
   },
   {
     quote:
-      "Their CTF pipeline produces better operators than most graduate programs. We hire from it every single year without hesitation.",
+      "This is where serious conversations about evidence, trust, and digital resilience actually happen. The signal is high and the room is thoughtful.",
     name: "Sarah Klein",
     role: "VP Engineering, Vertex",
   },
   {
     quote:
-      "Genuinely world-class workshops. The hardware track alone was worth the trip across the country.",
+      "A rare mix of technical depth and policy awareness. It is the kind of gathering that makes the industry sharper.",
     name: "Andre Costa",
     role: "Firmware Engineer, Ironclad",
   },

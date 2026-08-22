@@ -67,7 +67,7 @@ export function Nav() {
             href="#join"
             className="hidden px-5 py-2.5 text-[13px] sm:inline-flex"
           >
-            Contact
+            Contact Us
           </MagneticLink>
           <button
             type="button"

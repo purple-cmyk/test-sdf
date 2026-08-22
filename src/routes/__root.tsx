@@ -81,7 +81,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "Securing tomorrow. Empowering innovators. An elite collective of security researchers, engineers and students.",
+          "Securing tomorrow. A research and industry gathering bringing together leaders, practitioners, and policy-minded voices in digital security.",
       },
       { name: "theme-color", content: "#ffffff" },
       { property: "og:type", content: "website" },

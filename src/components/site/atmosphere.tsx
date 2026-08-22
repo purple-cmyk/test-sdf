@@ -145,25 +145,5 @@ export function ParticleField({ className = "" }: { className?: string }) {
 
 /* ---------------- Mouse-follow glow ---------------- */
 export function MouseGlow() {
-  const ref = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    if (!window.matchMedia("(pointer: fine)").matches) return;
-    const move = (e: MouseEvent) => {
-      if (ref.current)
-        ref.current.style.transform = `translate3d(${e.clientX - 320}px,${e.clientY - 320}px,0)`;
-    };
-    window.addEventListener("mousemove", move);
-    return () => window.removeEventListener("mousemove", move);
-  }, []);
-  return (
-    <div
-      aria-hidden
-      ref={ref}
-      className="pointer-events-none fixed top-0 left-0 z-0 hidden h-[640px] w-[640px] rounded-full opacity-[0.30] blur-[70px] transition-transform duration-700 ease-out md:block"
-      style={{
-        background:
-          "radial-gradient(circle, color-mix(in oklab, var(--primary) 10%, transparent), transparent 65%)",
-      }}
-    />
-  );
+  return null;
 }

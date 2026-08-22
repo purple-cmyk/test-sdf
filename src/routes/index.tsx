@@ -9,7 +9,7 @@ import { Faq, Footer, Join, Sponsors, Testimonials } from "@/components/site/sec
 
 const title = "SDF Society of Digital Forensics — SDF Summit 2027";
 const description =
-  "The Society of Digital Forensics brings together researchers, practitioners and students working at the frontier of forensic investigation, incident response and digital evidence.";
+  "The Society of Digital Forensics brings together researchers, practitioners, and students working at the frontier of forensic investigation, incident response, and digital evidence.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -30,7 +30,6 @@ function Index() {
     <>
       <SmoothScroll />
       <ScrollProgress />
-      <MouseGlow />
       <Nav />
       <main className="relative z-10">
         <Hero />

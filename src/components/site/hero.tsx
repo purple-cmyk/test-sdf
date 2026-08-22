@@ -120,7 +120,7 @@ export function Hero() {
           className="mt-8 max-w-xl text-balance text-base leading-relaxed text-muted-foreground md:text-lg"
         >
           Securing tomorrow. Empowering innovators. A collective of
-          researchers, builders and defenders advancing the practice of
+          researchers, builders, and defenders advancing the practice of
           security.
         </motion.p>
 

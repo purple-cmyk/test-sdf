@@ -156,11 +156,11 @@ export const testimonials = [
 export const faqs = [
   {
     q: "Who can join the society?",
-    a: "Anyone with a serious interest in security — students, professionals and self-taught researchers. There is no entrance exam, only curiosity and a commitment to ethical practice.",
+    a: "Anyone with a serious interest in security — students, professionals, and self-taught researchers. There is no entrance exam, only curiosity and a commitment to ethical practice.",
   },
   {
     q: "Do I need prior experience?",
-    a: "No. Roughly a third of our members join with no technical background. We run a structured beginner track covering networking, Linux and fundamentals before you touch offensive tooling.",
+    a: "No. Roughly a third of our members join with no technical background. We run a structured beginner track covering networking, Linux, and fundamentals before you touch offensive tooling.",
   },
   {
     q: "What does conference registration include?",

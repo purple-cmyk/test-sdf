@@ -36,17 +36,16 @@ export function CinematicGallery() {
             key={`${item.title}-${i}`}
             className="!w-[78vw] sm:!w-[46vw] lg:!w-[32vw]"
           >
-            <figure className="group relative aspect-[4/3] overflow-hidden rounded-sm border border-border">
+            <figure className="group relative aspect-[4/3] overflow-hidden rounded-sm border border-border bg-background shadow-none">
               <img
                 src={item.src}
                 alt={`${item.title} — ${item.location}, ${item.year}`}
                 loading="lazy"
                 width={1400}
                 height={1000}
-                className="h-full w-full scale-[1.04] object-cover brightness-[0.78] saturate-[1.05] transition-[transform,filter] duration-[1400ms] ease-[var(--ease-luxe)] group-hover:scale-110 group-hover:brightness-100"
+                className="h-full w-full scale-[1.04] object-cover brightness-[0.78] saturate-[1.05] drop-shadow-none transition-[transform,filter] duration-[1400ms] ease-[var(--ease-luxe)] group-hover:scale-110 group-hover:brightness-100"
                 draggable={false}
               />
-              <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_top,color-mix(in_oklab,var(--background)_92%,transparent),transparent_55%)]" />
             </figure>
           </SwiperSlide>
         ))}

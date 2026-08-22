@@ -108,7 +108,7 @@
   --glow-primary: none;
   --glow-accent: none;
   --glow-violet: none;
-  --shadow-elevate: 0 8px 20px rgba(17, 24, 39, 0.06);
+  --shadow-elevate: none;
 
   --gradient-line: linear-gradient(90deg, transparent, rgba(17, 24, 39, 0.18), transparent);
   --gradient-mesh: radial-gradient(
@@ -136,6 +136,14 @@
 @layer base {
   * {
     border-color: var(--color-border);
+    box-shadow: none;
+  }
+
+  img,
+  figure,
+  button {
+    box-shadow: none !important;
+    filter: none;
   }
 
   html {

@@ -124,8 +124,7 @@ export function Conference() {
           height={1000}
           className="h-full w-full object-cover opacity-[0.25]"
         />
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,var(--background)_8%,color-mix(in_oklab,var(--background)_80%,transparent)_60%,var(--background))]" />
-        <div className="absolute inset-0 noise-overlay" />
+        <div className="absolute inset-0 bg-transparent" />
       </div>
 
       <div className="relative mx-auto grid w-full max-w-7xl gap-14 px-6 py-28 md:px-10 md:py-40 lg:grid-cols-[1fr_0.9fr]">
@@ -134,7 +133,7 @@ export function Conference() {
             index="03"
             eyebrow="Annual Conference"
             title="SDF SUMMIT 2027"
-            description="Three days of original research, adversarial simulation and hands-on training — under one roof, with the people actually doing the work."
+            description="Three days of original research, adversarial simulation, and hands-on training — all under one roof, with the people who are actually doing the work."
           />
 
           <Reveal delay={0.2} className="mt-12">
@@ -159,7 +158,7 @@ export function Conference() {
         </div>
 
         <Reveal delay={0.15}>
-          <div className="glass relative rounded-sm p-7 shadow-[var(--shadow-elevate)] md:p-9">
+          <div className="glass relative rounded-sm p-7 shadow-none md:p-9">
             <div
               aria-hidden
               className="absolute inset-x-8 -top-px h-px bg-[var(--gradient-line)]"

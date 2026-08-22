@@ -40,9 +40,8 @@ export function Highlights() {
                 loading="lazy"
                 width={1400}
                 height={1000}
-                className="h-full w-full object-cover brightness-[0.75] transition-[transform,filter] duration-[1300ms] ease-[var(--ease-luxe)] group-hover:scale-[1.09] group-hover:brightness-100"
+                className="h-full w-full object-cover brightness-[0.75] drop-shadow-none transition-[transform,filter] duration-[1300ms] ease-[var(--ease-luxe)] group-hover:scale-[1.09] group-hover:brightness-100"
               />
-              <div className="absolute inset-0 bg-[linear-gradient(to_top,color-mix(in_oklab,var(--background)_70%,transparent),transparent_60%)]" />
               <span className="absolute inset-0 border border-primary/0 transition-colors duration-700 group-hover:border-primary/40" />
             </button>
           </Reveal>

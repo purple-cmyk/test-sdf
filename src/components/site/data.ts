@@ -1,9 +1,9 @@
-import confStage from "@/assets/more/SAH00050.JPG";
-import ctf from "@/assets/more/SAH00062.JPG";
-import workshopImg from "@/assets/more/SAH00066.JPG";
-import keynote from "@/assets/more/SAH00071.JPG";
-import networking from "@/assets/more/SAH00078.JPG";
-import soc from "@/assets/more/SAH00091.JPG";
+import confStage from "@/assets/more/SAH00050.webp";
+import ctf from "@/assets/more/SAH00062.webp";
+import workshopImg from "@/assets/more/SAH00066.webp";
+import keynote from "@/assets/more/SAH00071.webp";
+import networking from "@/assets/more/SAH00078.webp";
+import soc from "@/assets/more/SAH00091.webp";
 
 export const images = { confStage, ctf, workshopImg, keynote, networking, soc };
 

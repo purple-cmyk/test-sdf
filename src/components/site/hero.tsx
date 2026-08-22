@@ -147,9 +147,9 @@ export function Hero() {
             <ArrowRight className="h-4 w-4 transition-transform duration-500 group-hover:translate-x-1" />
           </MagneticLink>
 
-          <MagneticLink href="#past-conferences" variant="ghost" className="w-full justify-center sm:w-auto">
+          <MagneticLink href="#workshops" variant="ghost" className="w-full justify-center sm:w-auto">
             <Terminal className="h-4 w-4 text-accent" />
-            View past conferences
+            Learn More
           </MagneticLink>
         </motion.div>
       </motion.div>

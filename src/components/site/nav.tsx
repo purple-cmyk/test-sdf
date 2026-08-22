@@ -39,7 +39,7 @@ export function Nav() {
       >
         <a href="#top" className="group flex items-center gap-2.5" aria-label="Home">
           <img
-            src="/sdf.png"
+            src="/sdf.webp"
             alt="SDF logo"
             className="h-10 w-10 rounded-full object-cover transition-transform duration-500 group-hover:scale-105 sm:h-12 sm:w-12"
           />

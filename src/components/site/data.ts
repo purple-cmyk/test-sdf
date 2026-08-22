@@ -62,38 +62,26 @@ export const speakers = [
 export const workshops = [
   {
     title: "Research & Publication Forum",
-    level: "Open to all",
-    duration: "6 hrs",
     desc: "A platform for members and researchers to present findings, publish technical work, and discuss emerging digital forensic challenges.",
   },
   {
     title: "Industry–Government Dialogue",
-    level: "Policy-focused",
-    duration: "4 hrs",
     desc: "A direct channel for startups, professionals, and citizens to raise concerns and discuss digital evidence, cyber risk, and governance with relevant bodies.",
   },
   {
     title: "Case Review & Evidence Analysis",
-    level: "Advanced",
-    duration: "8 hrs",
     desc: "Structured review of real-world forensic cases, investigative workflows, and digital evidence integrity practices.",
   },
   {
     title: "Public Interest Cyber Concerns",
-    level: "Community",
-    duration: "5 hrs",
     desc: "A forum to surface pressing issues affecting citizens, startups, and institutions and convert them into actionable recommendations.",
   },
   {
     title: "Forensics in Emerging Tech",
-    level: "Intermediate",
-    duration: "3 hrs",
     desc: "Exploration of AI, cloud, mobile, and digital ecosystems through the lens of investigation, trust, and accountability.",
   },
   {
     title: "Research-to-Action Lab",
-    level: "Collaborative",
-    duration: "4 hrs",
     desc: "Turning research insights into policy-aware, evidence-driven solutions for institutions, industry stakeholders, and public bodies.",
   },
 ];

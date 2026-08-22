@@ -173,38 +173,13 @@ export function Workshops() {
         {workshops.map((w, i) => (
           <Reveal key={w.title} delay={(i % 3) * 0.08}>
             <article
-              onMouseMove={(e) => {
-                const el = e.currentTarget;
-                const r = el.getBoundingClientRect();
-                el.style.setProperty("--mx", `${e.clientX - r.left}px`);
-                el.style.setProperty("--my", `${e.clientY - r.top}px`);
-              }}
               className="group relative h-full overflow-hidden rounded-sm border border-border bg-background/45 p-7 transition-transform duration-700 ease-[var(--ease-luxe)] hover:-translate-y-1.5"
             >
-              <div
-                aria-hidden
-                className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
-                style={{
-                  background:
-                    "radial-gradient(340px circle at var(--mx) var(--my), color-mix(in oklab,var(--primary) 8%,transparent), transparent 70%)",
-                }}
-              />
-              <div className="relative flex items-start justify-between">
-                <span className="grid h-11 w-11 place-items-center rounded-sm border border-border transition-all duration-700 group-hover:rotate-12 group-hover:border-accent/60 group-hover:text-accent">
-                  <Zap className="h-4 w-4" />
-                </span>
-                <span className="font-mono text-[10px] tracking-[0.2em] text-muted-foreground">
-                  {w.duration.toUpperCase()}
-                </span>
-              </div>
-              <h3 className="relative mt-7 font-display text-xl font-medium tracking-tight">
+              <h3 className="relative font-display text-xl font-medium tracking-tight">
                 {w.title}
               </h3>
-              <p className="relative mt-3 text-sm leading-relaxed text-muted-foreground">
+              <p className="relative mt-4 text-sm leading-relaxed text-muted-foreground">
                 {w.desc}
-              </p>
-              <p className="relative mt-6 font-mono text-[10px] tracking-[0.2em] text-primary">
-                {w.level.toUpperCase()}
               </p>
               <span
                 aria-hidden

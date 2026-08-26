@@ -7,9 +7,9 @@ import { About, Conference } from "@/components/site/sections-core";
 import { Highlights, Speakers, Workshops } from "@/components/site/sections-showcase";
 import { Faq, Footer, Join, Sponsors, Testimonials } from "@/components/site/sections-closing";
 
-const title = "SDF Society of Digital Forensics — SDF Summit 2027";
+const title = "SDF Society of Digital Forensic — SDF Summit 2027";
 const description =
-  "The Society of Digital Forensics brings together researchers, practitioners, and students working at the frontier of forensic investigation, incident response, and digital evidence.";
+  "The Society of Digital Forensic brings together researchers, practitioners, and students working at the frontier of forensic investigation, incident response, and digital evidence.";
 
 export const Route = createFileRoute("/")({
   head: () => ({

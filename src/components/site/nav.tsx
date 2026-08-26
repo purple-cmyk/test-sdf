@@ -301,7 +301,7 @@ export function Nav() {
 
           <span className="font-display text-[11px] font-medium tracking-[-0.02em] sm:text-sm md:text-base">
             <span className="hidden sm:inline">
-              Society For Digital Forensics
+              Society of Digital Forensic
             </span>
           </span>
         </a>

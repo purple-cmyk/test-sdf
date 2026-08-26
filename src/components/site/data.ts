@@ -55,10 +55,10 @@ export const speakers = [
   },
   {
     name: "MeitY Official",
-    role: "Advisor, Digital Forensics",
+    role: "Advisor, Digital Forensic",
     org: "Government Cyber Security Division",
     img: "/1760891997456.webp",
-    topic: "Cyber Policy & Forensics",
+    topic: "Cyber Policy & Forensic",
     accent: "accent" as const,
   },
   {
@@ -72,7 +72,7 @@ export const speakers = [
   {
     name: "MeitY Representative",
     role: "Cyber Security & Legal Response",
-    org: "Government Digital Forensics",
+    org: "Government Digital Forensic",
     img: "/1760891997558.webp",
     topic: "Digital Evidence Standards",
     accent: "primary" as const,
@@ -97,7 +97,7 @@ export const workshops = [
     desc: "A forum to surface pressing issues affecting citizens, startups, and institutions and convert them into actionable recommendations.",
   },
   {
-    title: "Forensics in Emerging Tech",
+    title: "Digital Forensic in Emerging Tech",
     desc: "Exploration of AI, cloud, mobile, and digital ecosystems through the lens of investigation, trust, and accountability.",
   },
   {
@@ -108,7 +108,7 @@ export const workshops = [
 
 export const timeline = [
   { year: "2014", title: "Founded", desc: "A shared effort to bring security research, practice, and public-interest dialogue together." },
-  { year: "2017", title: "Research Focus", desc: "A stronger emphasis on evidence-driven inquiry and applied digital forensics." },
+  { year: "2017", title: "Research Focus", desc: "A stronger emphasis on evidence-driven inquiry and applied digital forensic." },
   { year: "2019", title: "Conference Launched", desc: "An annual gathering of researchers, industry voices, and policy-minded practitioners." },
   { year: "2022", title: "Policy Engagement", desc: "Greater attention to governance, accountability, and the practical use of security research." },
   { year: "2024", title: "Leadership Dialogue", desc: "Expanded conversations across institutions, researchers, and technology leaders." },

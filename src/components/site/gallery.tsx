@@ -9,7 +9,7 @@ export function CinematicGallery() {
     <section id="past-conferences" aria-label="Last year's conference" className="relative py-20 md:py-28">
       <div className="mx-auto mb-10 flex w-[min(94vw,80rem)] items-end justify-between gap-6 px-1">
         <div>
-          <p className="eyebrow">ICDF International Conference on Digital Forensics</p>
+          <p className="eyebrow">ICDF International Conference on Digital Forensic</p>
           <h2 className="mt-3 font-display text-[clamp(1.5rem,3vw,2.4rem)] leading-tight font-medium">
             Last year, in frames.
           </h2>

@@ -129,7 +129,7 @@ export function Conference() {
               {[
                 { icon: CalendarDays, label: "Date", value: "3–5 Jan 2027" },
                 { icon: MapPin, label: "Venue", value: "Eros Hotel, Nehru Place" },
-                { icon: Sparkles, label: "Theme", value: "Digital Forensics" },
+                { icon: Sparkles, label: "Theme", value: "Digital Forensic" },
               ].map((d) => (
                 <div key={d.label}>
                   <dt className="flex items-center gap-2 font-mono text-[10px] tracking-[0.22em] text-muted-foreground">

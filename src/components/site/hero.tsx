@@ -12,7 +12,7 @@ import { ParticleField } from "./atmosphere";
 function Ticker() {
   const items = [
     "ACCEPTING PAPERS FOR 2027",
-    "11.9 IFIP DIGITAL FORENSICS CONFERENCE",
+    "11.9 IFIP DIGITAL FORENSIC CONFERENCE",
     "CALL FOR PAPERS NOW OPEN",
     "SUBMIT YOUR RESEARCH",
   ];
@@ -134,7 +134,7 @@ export function Hero() {
           </span>
 
           <span className="mt-2 block whitespace-nowrap text-[clamp(2rem,6.5vw,6.4rem)] leading-[0.92] text-accent text-glow">
-            <SplitWords text="DIGITAL FORENSICS" delay={0.55} stagger={0.07} />
+            <SplitWords text="DIGITAL FORENSIC" delay={0.55} stagger={0.07} />
           </span>
         </h1>
 
@@ -159,7 +159,7 @@ export function Hero() {
         >
           Advancing the science of digital evidence through research,
           collaboration, education, and meaningful dialogue across the global
-          digital forensics community.
+          digital forensic community.
         </motion.p>
 
         {/* Buttons — unchanged */}

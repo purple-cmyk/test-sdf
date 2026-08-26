@@ -1,20 +1,40 @@
-import confStage from "@/assets/more/SAH00050.webp";
-import ctf from "@/assets/more/SAH00062.webp";
-import workshopImg from "@/assets/more/SAH00066.webp";
-import keynote from "@/assets/more/SAH00071.webp";
-import networking from "@/assets/more/SAH00078.webp";
-import soc from "@/assets/more/SAH00091.webp";
+const moreImages = Object.values(
+  import.meta.glob("@/assets/more/*.webp", {
+    eager: true,
+    import: "default",
+  }),
+).sort() as string[];
 
-export const images = { confStage, ctf, workshopImg, keynote, networking, soc };
-
-export const gallery = [
-  { src: confStage, title: "Opening Keynote", location: "Grand Hall", year: "2025" },
-  { src: ctf, title: "Research Exchange", location: "Forum Hall", year: "2025" },
-  { src: workshopImg, title: "Leadership Dialogue", location: "Studio B", year: "2025" },
-  { src: keynote, title: "Evidence and Trust", location: "Main Stage", year: "2025" },
-  { src: networking, title: "Networking Roundtable", location: "Atrium", year: "2025" },
-  { src: soc, title: "Public Interest Session", location: "Ops Center", year: "2025" },
+const galleryMeta = [
+  { title: "Opening Keynote", location: "Grand Hall" },
+  { title: "Research Exchange", location: "Forum Hall" },
+  { title: "Leadership Dialogue", location: "Studio B" },
+  { title: "Evidence and Trust", location: "Main Stage" },
+  { title: "Networking Roundtable", location: "Atrium" },
+  { title: "Public Interest Session", location: "Ops Center" },
+  { title: "Workshop Floor", location: "Innovation Lab" },
+  { title: "Community Spotlight", location: "Gallery Hall" },
+  { title: "Field Research", location: "Ops Center" },
+  { title: "Leadership Briefing", location: "Forum Hall" },
+  { title: "Member Showcase", location: "Main Stage" },
+  { title: "Closing Session", location: "Grand Hall" },
 ];
+
+export const images = {
+  confStage: moreImages[0] ?? "/sdf.webp",
+  ctf: moreImages[1] ?? "/sdf.webp",
+  workshopImg: moreImages[2] ?? "/sdf.webp",
+  keynote: moreImages[3] ?? "/sdf.webp",
+  networking: moreImages[4] ?? "/sdf.webp",
+  soc: moreImages[5] ?? "/sdf.webp",
+};
+
+export const gallery = moreImages.slice(0, 12).map((src, index) => ({
+  src,
+  title: galleryMeta[index]?.title ?? `Session ${index + 1}`,
+  location: galleryMeta[index]?.location ?? "Conference Hall",
+  year: "2025",
+}));
 
 export const stats = [
   { label: "Active Members", value: 2400, suffix: "+" },

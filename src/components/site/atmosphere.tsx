@@ -32,13 +32,28 @@ export function SmoothScroll() {
 export function ScrollProgress() {
   const [p, setP] = useState(0);
   useEffect(() => {
-    const onScroll = () => {
+    let frame = 0;
+
+    const update = () => {
       const h = document.documentElement.scrollHeight - window.innerHeight;
       setP(h > 0 ? window.scrollY / h : 0);
+      frame = 0;
     };
-    onScroll();
+
+    const onScroll = () => {
+      if (frame) return;
+      frame = window.requestAnimationFrame(update);
+    };
+
+    update();
     window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+    window.addEventListener("resize", onScroll, { passive: true });
+
+    return () => {
+      window.cancelAnimationFrame(frame);
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+    };
   }, []);
   return (
     <div className="pointer-events-none fixed inset-x-0 top-0 z-[70] h-[2px] bg-slate-200">
@@ -79,7 +94,9 @@ export function ParticleField({ className = "" }: { className?: string }) {
       cvs.width = w * dpr;
       cvs.height = h * dpr;
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-      const count = Math.min(90, Math.round((w * h) / 18000));
+
+      const maxParticles = w < 768 ? 42 : w < 1280 ? 60 : 78;
+      const count = Math.min(maxParticles, Math.round((w * h) / 22000));
       pts = Array.from({ length: count }, () => ({
         x: Math.random() * w,
         y: Math.random() * h,
@@ -103,6 +120,7 @@ export function ParticleField({ className = "" }: { className?: string }) {
         p.y += p.vy;
         if (p.x < 0 || p.x > w) p.vx *= -1;
         if (p.y < 0 || p.y > h) p.vy *= -1;
+
         const d = Math.hypot(p.x - mouse.x, p.y - mouse.y);
         const near = d < 160;
         ctx.beginPath();
@@ -110,9 +128,11 @@ export function ParticleField({ className = "" }: { className?: string }) {
         ctx.fillStyle = near ? "rgba(13,148,110,0.38)" : "rgba(30,110,180,0.21)";
         ctx.fill();
       }
-      for (let i = 0; i < pts.length; i++) {
-        for (let j = i + 1; j < pts.length; j++) {
-          const a = pts[i]!;
+
+      const skipStep = pts.length > 60 ? 2 : 1;
+      for (let i = 0; i < pts.length; i += skipStep) {
+        const a = pts[i]!;
+        for (let j = i + skipStep; j < pts.length; j += skipStep) {
           const b = pts[j]!;
           const d = Math.hypot(a.x - b.x, a.y - b.y);
 
@@ -126,6 +146,7 @@ export function ParticleField({ className = "" }: { className?: string }) {
           }
         }
       }
+
       raf = requestAnimationFrame(draw);
     };
 

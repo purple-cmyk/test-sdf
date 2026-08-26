@@ -44,7 +44,7 @@ export function Nav() {
             className="h-10 w-10 rounded-full object-cover transition-transform duration-500 group-hover:scale-105 sm:h-12 sm:w-12"
           />
           <span className="font-display text-[11px] font-medium tracking-[-0.02em] sm:text-sm md:text-base">
-            <span className="hidden sm:inline">SDF • </span>Digital Forensics
+            <span className="hidden sm:inline">Society For Digital Forensics</span>
           </span>
         </a>
 

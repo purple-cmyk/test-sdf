@@ -81,28 +81,28 @@ export const speakers = [
 
 export const workshops = [
   {
-    title: "Research & Publication Forum",
-    desc: "A platform for members and researchers to present findings, publish technical work, and discuss emerging digital forensic challenges.",
+    title: "Promotion of Digital Forensics in India",
+    desc: "To advance education, research, training, and awareness in the field of digital forensics, cyber investigation, and cybercrime prevention.",
   },
   {
-    title: "Industry–Government Dialogue",
-    desc: "A direct channel for startups, professionals, and citizens to raise concerns and discuss digital evidence, cyber risk, and governance with relevant bodies.",
+    title: "Educational Conferences and Workshops",
+    desc: "To organize national and international conferences, workshops, seminars, and symposia on digital forensics and allied domains.",
   },
   {
-    title: "Case Review & Evidence Analysis",
-    desc: "Structured review of real-world forensic cases, investigative workflows, and digital evidence integrity practices.",
+    title: "Industry-Academia Collaboration",
+    desc: "To foster collaboration between academia, industry, and government bodies for innovation and capacity building in digital forensic science.",
   },
   {
-    title: "Public Interest Cyber Concerns",
-    desc: "A forum to surface pressing issues affecting citizens, startups, and institutions and convert them into actionable recommendations.",
+    title: "Publications & Knowledge Dissemination",
+    desc: "To publish journals, proceedings, newsletters, and digital resources on emerging trends in cyber forensics.",
   },
   {
-    title: "Digital Forensic in Emerging Tech",
-    desc: "Exploration of AI, cloud, mobile, and digital ecosystems through the lens of investigation, trust, and accountability.",
+    title: "Standards & Policy Development",
+    desc: "To contribute towards creating frameworks, policies, and standards for forensic investigation and cyber security practices.",
   },
   {
-    title: "Research-to-Action Lab",
-    desc: "Turning research insights into policy-aware, evidence-driven solutions for institutions, industry stakeholders, and public bodies.",
+    title: "Skill Development & Certification",
+    desc: "To develop certification programs and professional training courses for students, researchers, law enforcement, and industry professionals.",
   },
 ];
 

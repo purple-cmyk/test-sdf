@@ -26,10 +26,10 @@ export function Reveal({
   return (
     <motion.div
       className={className}
-      initial={reduced ? false : { opacity: 0, y, filter: "blur(10px)" }}
-      whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+      initial={reduced ? false : { opacity: 0, y }}
+      whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-80px" }}
-      transition={{ duration: 1, delay, ease: EASE }}
+      transition={{ duration: 0.75, delay, ease: EASE }}
     >
       {children}
     </motion.div>
@@ -59,10 +59,10 @@ export function SplitWords({
         <span key={`${word}-${i}`} className="inline-block overflow-hidden py-[0.08em]">
           <motion.span
             className={cn("inline-block will-change-transform", wordClassName)}
-            initial={reduced ? false : { y: "40%", opacity: 0.001, filter: "blur(6px)" }}
-            whileInView={{ y: "0%", opacity: 1, filter: "blur(0px)" }}
+            initial={reduced ? false : { y: "18%", opacity: 0.001 }}
+            whileInView={{ y: "0%", opacity: 1 }}
             viewport={{ once: true, margin: "-40px" }}
-            transition={{ duration: 1.1, delay: delay + i * stagger, ease: EASE }}
+            transition={{ duration: 0.9, delay: delay + i * stagger, ease: EASE }}
           >
             {word}
             {i < words.length - 1 ? "\u00A0" : ""}

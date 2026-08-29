@@ -60,7 +60,15 @@ export function Hero() {
   const scale = useTransform(scrollYProgress, [0, 1], [1, 1.04]);
 
   useEffect(() => {
-    setMounted(true);
+    const mediaQuery = window.matchMedia("(max-width: 768px)");
+    setMounted(!mediaQuery.matches);
+
+    const handler = (event: MediaQueryListEvent) => {
+      setMounted(!event.matches);
+    };
+
+    mediaQuery.addEventListener("change", handler);
+    return () => mediaQuery.removeEventListener("change", handler);
   }, []);
 
   return (
@@ -143,15 +151,13 @@ export function Hero() {
           initial={{
             opacity: 0,
             y: 18,
-            filter: "blur(8px)",
           }}
           animate={{
             opacity: 1,
             y: 0,
-            filter: "blur(0px)",
           }}
           transition={{
-            duration: 1.1,
+            duration: 0.8,
             delay: 0.85,
             ease: [0.19, 1, 0.22, 1],
           }}

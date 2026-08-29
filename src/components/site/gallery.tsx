@@ -25,8 +25,8 @@ export function CinematicGallery() {
         spaceBetween={20}
         loop
         grabCursor
-        freeMode={{ enabled: true, momentum: true, momentumRatio: 0.6 }}
-        speed={7000}
+        freeMode={{ enabled: true, momentum: true, momentumRatio: 0.35 }}
+        speed={4200}
         autoplay={{ delay: 1, disableOnInteraction: false, pauseOnMouseEnter: true }}
         allowTouchMove
         className="!px-[3vw]"

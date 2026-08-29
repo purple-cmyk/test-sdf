@@ -89,13 +89,13 @@ export function Join() {
         </h2>
         <Reveal delay={0.15}>
           <p className="mx-auto mt-7 max-w-lg text-base leading-relaxed text-muted-foreground md:text-lg">
-            Membership is free for students and open year-round. Join a community that advances digital forensic research, mentors emerging talent, supports public-interest concerns, and helps translate findings into action with institutions and policymakers.
+            Support our mission to advance digital forensic research, strengthen professional practice, and inspire the next generation of investigators, analysts, and public-interest practitioners.
           </p>
         </Reveal>
         <Reveal delay={0.25}>
           <div className="mt-12 flex flex-col items-center gap-3 sm:flex-row">
             <MagneticLink href="mailto:join@cybersecuritysociety.org">
-              Apply for Membership
+              Support Our Mission
               <ArrowRight className="h-4 w-4 transition-transform duration-500 group-hover:translate-x-1" />
             </MagneticLink>
             <MagneticLink href="mailto:hello@cybersecuritysociety.org" variant="ghost">

@@ -29,7 +29,7 @@ export function Highlights() {
         index=""
         eyebrow=""
         title="Moments from the gathering."
-        description="Every frame from the last edition — keynotes, conversations, and the research moments that shaped the room."
+        description="A look at the last edition, featuring keynotes, conversations, and the research moments that defined the room."
       />
 
       <div className="mt-16 grid auto-rows-[220px] grid-cols-1 gap-3 md:grid-cols-3 lg:auto-rows-[260px] lg:grid-cols-4">
@@ -130,7 +130,7 @@ export function Speakers() {
             index=""
             eyebrow=""
             title="Featured Speakers"
-            description="Leading voices in digital forensics, cyber investigations, and secure systems research."
+            description="Leading voices in digital forensics and cyber investigations."
           />
         </Reveal>
       </div>

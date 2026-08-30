@@ -56,7 +56,7 @@ export function SplitWords({
   return (
     <span className={cn("inline-block", className)}>
       {words.map((word, i) => (
-        <span key={`${word}-${i}`} className="inline-block overflow-hidden py-[0.08em]">
+        <span key={`${word}-${i}`} className="inline-block py-[0.09em]">
           <motion.span
             className={cn("inline-block will-change-transform", wordClassName)}
             initial={reduced ? false : { y: "18%", opacity: 0.001 }}
@@ -163,7 +163,7 @@ export function SectionHeading({
   return (
     <div
       className={cn(
-        "flex flex-col gap-6",
+        "flex flex-col gap-[1.6rem]",
         align === "center" && "items-center text-center",
       )}
     >
@@ -174,7 +174,7 @@ export function SectionHeading({
           <span className="eyebrow">{eyebrow}</span>
         </div>
       </Reveal>
-      <h2 className="max-w-4xl text-[clamp(2.25rem,5.4vw,4.5rem)] leading-[0.95] font-medium">
+      <h2 className="max-w-4xl pb-[0.04em] text-[clamp(2.25rem,5.4vw,4.5rem)] leading-[0.95] font-medium">
         <SplitWords text={title} />
       </h2>
       {description ? (

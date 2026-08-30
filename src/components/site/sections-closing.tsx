@@ -7,7 +7,6 @@ import {
   Mail,
   Minus,
   Plus,
-  ShieldHalf,
   Twitter,
 } from "lucide-react";
 import { MagneticLink, Reveal, Section, SectionHeading } from "./primitives";
@@ -162,100 +161,28 @@ export function Faq() {
 /* ------------------------ SECTION 12 — FOOTER ------------------------- */
 export function Footer() {
   return (
-    <footer className="relative overflow-hidden border-t border-border/60">
-      <div aria-hidden className="absolute inset-0 cyber-grid opacity-[0.15]" />
-      <div className="relative mx-auto w-full max-w-7xl px-6 py-20 md:px-10">
-        <div className="grid gap-14 lg:grid-cols-[1.2fr_1fr_1fr]">
-          <div>
-            <div className="flex items-center gap-2.5">
-              <ShieldHalf className="h-5 w-5 text-primary" />
-              <span className="font-display text-base font-medium tracking-tight">
-                Cyber Security Society
-              </span>
-            </div>
-            <p className="mt-5 max-w-sm text-sm leading-relaxed text-muted-foreground">
-              Securing tomorrow. Empowering innovators. Independent, member-run,
-              and relentlessly technical since 2014.
-            </p>
-            <form
-              className="mt-8 flex max-w-sm items-center gap-2"
-              onSubmit={(e) => e.preventDefault()}
-            >
-              <label htmlFor="newsletter" className="sr-only">
-                Email address
-              </label>
-              <input
-                id="newsletter"
-                type="email"
-                required
-                placeholder="you@domain.com"
-                className="h-11 w-full rounded-full border border-border bg-surface/50 px-5 text-sm text-foreground outline-none transition-colors duration-500 placeholder:text-muted-foreground focus:border-primary/60"
-              />
-              <button
-                type="submit"
-                aria-label="Subscribe to newsletter"
-                className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-primary text-primary-foreground transition-transform duration-500 hover:scale-105"
-              >
-                <ArrowRight className="h-4 w-4" />
-              </button>
-            </form>
-          </div>
-
-          <nav aria-label="Footer" className="grid grid-cols-2 gap-10 lg:col-span-2">
-            <div>
-              <p className="eyebrow">Explore</p>
-              <ul className="mt-5 flex flex-col gap-3">
-                {[
-                  ["#about", "Society"],
-                  ["#conference", "Conference"],
-                  ["#speakers", "Speakers"],
-                  ["#workshops", "Workshops"],
-                  ["#faq", "FAQ"],
-                ].map(([href, label]) => (
-                  <li key={href}>
-                    <a
-                      href={href}
-                      className="text-sm text-muted-foreground transition-colors duration-300 hover:text-foreground"
-                    >
-                      {label}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <p className="eyebrow">Connect</p>
-              <ul className="mt-5 flex flex-col gap-3">
-                <li className="text-sm text-muted-foreground">
-                  hello@sdfsociety.org
-                </li>
-                <li className="text-sm text-muted-foreground">Eros Hotel, Nehru Place</li>
-              </ul>
-              <div className="mt-6 flex gap-2">
-                {[Twitter, Github, Linkedin].map((Icon, i) => (
-                  <a
-                    key={i}
-                    href="#top"
-                    aria-label="Social link"
-                    className="grid h-10 w-10 place-items-center rounded-full border border-border text-muted-foreground transition-all duration-500 hover:scale-110 hover:border-primary/60 hover:text-primary"
-                  >
-                    <Icon className="h-4 w-4" />
-                  </a>
-                ))}
-              </div>
-            </div>
-          </nav>
+    <footer className="border-t border-border/60">
+      <div className="mx-auto flex w-full max-w-7xl flex-col items-center justify-between gap-4 px-6 py-8 md:flex-row md:px-10">
+        <div className="flex items-center gap-2.5">
+          <img
+            src="/sdf.webp"
+            alt="SDF logo"
+            className="h-9 w-9 rounded-full object-cover ring-1 ring-border/70"
+          />
+          <span className="font-display text-base font-medium tracking-tight">
+            Society of Digital Forensic
+          </span>
         </div>
 
-        <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-border pt-8 sm:flex-row">
-          <p className="font-mono text-[10px] tracking-[0.2em] text-muted-foreground">
-            © {new Date().getFullYear()} CYBER SECURITY SOCIETY
-          </p>
-          <p className="font-mono text-[10px] tracking-[0.2em] text-muted-foreground">
-            SECURING TOMORROW
-          </p>
-        </div>
+        <p className="text-center text-sm text-muted-foreground">
+          Securing tomorrow. Empowering innovators.
+        </p>
+
+        <p className="font-mono text-[10px] tracking-[0.2em] text-muted-foreground">
+          © {new Date().getFullYear()} @SDF 2026 | All rights reserved.
+        </p>
       </div>
     </footer>
   );
 }
+

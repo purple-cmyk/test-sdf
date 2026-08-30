@@ -222,7 +222,7 @@ const membershipPlans = [
     type: "Student Plan",
     details:
       "Designed for students, researchers, and early-career learners.",
-    yearly: "Contact us",
+    yearly: "₹500",
     fiveYear: "",
     lifetime: "",
     yearlyHref:
@@ -234,9 +234,9 @@ const membershipPlans = [
     type: "Individual Professional",
     details:
       "For practicing professionals and investigators seeking long-term engagement.",
-    yearly: "Contact us",
-    fiveYear: "Contact us",
-    lifetime: "Contact us",
+    yearly: "₹1,000",
+    fiveYear: "₹4,000",
+    lifetime: "₹10,000",
     yearlyHref:
       "mailto:membership@cybersecuritysociety.org?subject=Professional%20Membership%20Application",
     fiveYearHref:

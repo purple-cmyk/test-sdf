@@ -93,7 +93,7 @@ export function Join() {
         </Reveal>
         <Reveal delay={0.25}>
           <div className="mt-12 flex flex-col items-center gap-3 sm:flex-row">
-            <MagneticLink href="mailto:join@cybersecuritysociety.org">
+            <MagneticLink href="/membership">
               Support Our Mission
               <ArrowRight className="h-4 w-4 transition-transform duration-500 group-hover:translate-x-1" />
             </MagneticLink>

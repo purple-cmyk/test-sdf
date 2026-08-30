@@ -11,8 +11,8 @@ export function About() {
       <div className="grid gap-16 lg:grid-cols-[1.1fr_1fr] lg:gap-24">
         <div>
           <SectionHeading
-            index="02"
-            eyebrow="The Society"
+            index=""
+            eyebrow=""
             title="A gathering for researchers, leaders, and public-interest security."
             description="We are a member-led collective bringing together researchers, industry leaders, and policy-minded practitioners to discuss the most important questions shaping digital trust, evidence, and accountability."
           />
@@ -118,8 +118,8 @@ export function Conference() {
       <div className="relative mx-auto grid w-full max-w-7xl gap-14 px-6 py-28 md:px-10 md:py-40 lg:grid-cols-[1fr_0.9fr]">
         <div>
           <SectionHeading
-            index="03"
-            eyebrow="Annual Conference"
+            index=""
+            eyebrow=""
             title="SDF SUMMIT 2027"
             description="Three days of original research, adversarial simulation, and hands-on training — all under one roof, with the people who are actually doing the work."
           />

@@ -44,7 +44,7 @@ export function Testimonials() {
   const row = [...testimonials, ...testimonials];
   return (
     <Section id="testimonials">
-      <SectionHeading index="09" eyebrow="Voices" title="What members say." align="center" />
+      <SectionHeading index="" eyebrow="" title="What members say." align="center" />
       <div className="relative mt-16 overflow-hidden [mask-image:linear-gradient(90deg,transparent,black_10%,black_90%,transparent)]">
         <div className="flex w-max animate-marquee-slow gap-5 hover:[animation-play-state:paused]">
           {row.map((t, i) => (
@@ -81,7 +81,7 @@ export function Join() {
       <div aria-hidden className="absolute inset-0 noise-overlay" />
       <div className="relative mx-auto flex w-full max-w-4xl flex-col items-center px-6 py-32 text-center md:py-44">
         <Reveal>
-          <span className="eyebrow">10 — Membership</span>
+          <span className="eyebrow" aria-hidden="true"> </span>
         </Reveal>
         <h2 className="mt-7 font-display text-[clamp(2.4rem,7.4vw,5.6rem)] leading-[0.92] font-medium tracking-[-0.05em]">
           Become one of us.
@@ -113,7 +113,7 @@ export function Faq() {
   return (
     <Section id="faq">
       <div className="grid gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:gap-24">
-        <SectionHeading index="11" eyebrow="FAQ" title="Answers, before you ask." />
+        <SectionHeading index="" eyebrow="" title="Answers, before you ask." />
         <ul className="flex flex-col">
           {faqs.map((f, i) => {
             const isOpen = open === i;

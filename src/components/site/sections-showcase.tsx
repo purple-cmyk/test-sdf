@@ -26,8 +26,8 @@ export function Highlights() {
   return (
     <Section id="highlights" className="border-t border-border/60">
       <SectionHeading
-        index="04"
-        eyebrow="Highlights"
+        index=""
+        eyebrow=""
         title="Moments from the gathering."
         description="Every frame from the last edition — keynotes, conversations, and the research moments that shaped the room."
       />
@@ -125,16 +125,13 @@ export function Speakers() {
   return (
     <Section id="speakers">
       <div className="flex flex-wrap items-end justify-between gap-8">
-        <SectionHeading
-          index="05"
-          eyebrow="Featured Speakers"
-          title="The people on stage."
-        />
-
         <Reveal delay={0.2}>
-          <MagneticLink href="#join" variant="ghost">
-            View full lineup
-          </MagneticLink>
+          <SectionHeading
+            index=""
+            eyebrow=""
+            title="Featured Speakers"
+            description="Leading voices in digital forensics, cyber investigations, and secure systems research."
+          />
         </Reveal>
       </div>
 
@@ -203,8 +200,8 @@ export function Workshops() {
     >
       <div className="w-full overflow-visible">
         <SectionHeading
-          index="06"
-          eyebrow="Our Work"
+          index=""
+          eyebrow=""
           title="Society Aims & Objectives"
           description="To promote digital forensics, cyber investigation, research, and practical capacity building across academia, industry, and public institutions."
         />

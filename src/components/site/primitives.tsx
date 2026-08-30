@@ -154,12 +154,14 @@ export function SectionHeading({
   description,
   align = "left",
 }: {
-  index: string;
-  eyebrow: string;
+  index?: string;
+  eyebrow?: string;
   title: string;
   description?: string;
   align?: "left" | "center";
 }) {
+  const hasMeta = Boolean(index || eyebrow);
+
   return (
     <div
       className={cn(
@@ -167,13 +169,19 @@ export function SectionHeading({
         align === "center" && "items-center text-center",
       )}
     >
-      <Reveal>
-        <div className="flex items-center gap-4">
-          <span className="font-mono text-[11px] tracking-[0.3em] text-slate-500">{index}</span>
-          <span className="h-px w-8 bg-slate-300" />
-          <span className="eyebrow">{eyebrow}</span>
-        </div>
-      </Reveal>
+      {hasMeta ? (
+        <Reveal>
+          <div className="flex items-center gap-4">
+            {index ? (
+              <span className="font-mono text-[11px] tracking-[0.3em] text-slate-500">
+                {index}
+              </span>
+            ) : null}
+            {index && eyebrow ? <span className="h-px w-8 bg-slate-300" /> : null}
+            {eyebrow ? <span className="eyebrow">{eyebrow}</span> : null}
+          </div>
+        </Reveal>
+      ) : null}
       <h2 className="max-w-4xl pb-[0.04em] text-[clamp(2.25rem,5.4vw,4.5rem)] leading-[0.95] font-medium">
         <SplitWords text={title} />
       </h2>

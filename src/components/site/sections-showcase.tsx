@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import { Github, Linkedin, Twitter, X, Zap } from "lucide-react";
 import {
@@ -13,6 +14,17 @@ import { gallery, speakers, workshops } from "./data";
 /* --------------------- SECTION 04 — HIGHLIGHTS ------------------------ */
 export function Highlights() {
   const [active, setActive] = useState<number | null>(null);
+
+  useEffect(() => {
+    if (active === null) return;
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setActive(null);
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [active]);
 
   const spans = [
     "md:col-span-2 md:row-span-2",
@@ -60,53 +72,67 @@ export function Highlights() {
         ))}
       </div>
 
-      <AnimatePresence>
-        {active !== null ? (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.4 }}
-            className="fixed inset-0 z-[90] flex items-center justify-center bg-background/88 p-6 backdrop-blur-lg"
-            onClick={() => setActive(null)}
-            role="dialog"
-            aria-modal="true"
-            aria-label={gallery[active]?.title}
-          >
-            <button
-              type="button"
-              onClick={() => setActive(null)}
-              aria-label="Close preview"
-              className="absolute top-6 right-6 grid h-11 w-11 place-items-center rounded-full border border-border text-foreground"
-            >
-              <X className="h-4 w-4" />
-            </button>
+      {typeof document !== "undefined"
+        ? createPortal(
+            <AnimatePresence>
+              {active !== null ? (
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.4 }}
+                  className="fixed inset-0 z-[90] flex items-center justify-center bg-background/88 p-6 backdrop-blur-lg"
+                  onClick={() => setActive(null)}
+                  role="dialog"
+                  aria-modal="true"
+                  aria-label={gallery[active]?.title}
+                >
+                  <button
+                    type="button"
+                    onPointerDown={(event) => {
+                      event.preventDefault();
+                      event.stopPropagation();
+                      setActive(null);
+                    }}
+                    onClick={(event) => {
+                      event.stopPropagation();
+                      setActive(null);
+                    }}
+                    aria-label="Close preview"
+                    className="absolute top-6 right-6 z-10 grid h-11 w-11 place-items-center rounded-full border border-border bg-background/70 text-foreground backdrop-blur"
+                  >
+                    <X className="h-4 w-4" />
+                  </button>
 
-            <motion.figure
-              initial={{ scale: 0.94, opacity: 0, filter: "blur(8px)" }}
-              animate={{ scale: 1, opacity: 1, filter: "blur(0px)" }}
-              exit={{ scale: 0.96, opacity: 0 }}
-              transition={{
-                duration: 0.7,
-                ease: [0.19, 1, 0.22, 1],
-              }}
-              className="max-h-[82vh] w-[min(94vw,1100px)] overflow-hidden rounded-sm border border-border"
-            >
-              <img
-                src={gallery[active]!.src}
-                alt={gallery[active]!.title}
-                className="max-h-[70vh] w-full object-cover"
-              />
+                  <motion.figure
+                    initial={{ scale: 0.94, opacity: 0, filter: "blur(8px)" }}
+                    animate={{ scale: 1, opacity: 1, filter: "blur(0px)" }}
+                    exit={{ scale: 0.96, opacity: 0 }}
+                    transition={{
+                      duration: 0.7,
+                      ease: [0.19, 1, 0.22, 1],
+                    }}
+                    onClick={(event) => event.stopPropagation()}
+                    className="max-h-[82vh] w-[min(94vw,1100px)] overflow-hidden rounded-sm border border-border"
+                  >
+                    <img
+                      src={gallery[active]!.src}
+                      alt={gallery[active]!.title}
+                      className="max-h-[70vh] w-full object-cover"
+                    />
 
-              <figcaption className="glass px-5 py-4">
-                <span className="font-display text-sm">
-                  {gallery[active]!.title}
-                </span>
-              </figcaption>
-            </motion.figure>
-          </motion.div>
-        ) : null}
-      </AnimatePresence>
+                    <figcaption className="glass px-5 py-4">
+                      <span className="font-display text-sm">
+                        {gallery[active]!.title}
+                      </span>
+                    </figcaption>
+                  </motion.figure>
+                </motion.div>
+              ) : null}
+            </AnimatePresence>,
+            document.body,
+          )
+        : null}
     </Section>
   );
 }

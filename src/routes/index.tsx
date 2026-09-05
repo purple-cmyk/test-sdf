@@ -5,7 +5,7 @@ import { Hero } from "@/components/site/hero";
 import { CinematicGallery } from "@/components/site/gallery";
 import { About, Conference } from "@/components/site/sections-core";
 import { Highlights, Speakers, Workshops } from "@/components/site/sections-showcase";
-import { Faq, Footer, Join, Sponsors, Testimonials } from "@/components/site/sections-closing";
+import { Faq, Footer, Join, Sponsors } from "@/components/site/sections-closing";
 
 const title = "SDF Society of Digital Forensic — SDF Summit 2027";
 const description =
@@ -40,7 +40,6 @@ function Index() {
         <Speakers />
         <Workshops />
         <Sponsors />
-        <Testimonials />
         <Join />
         <Faq />
       </main>

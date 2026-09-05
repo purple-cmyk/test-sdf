@@ -61,6 +61,8 @@ export function Highlights() {
                 src={g.src}
                 alt={`${g.title}, ${g.location} ${g.year}`}
                 loading="lazy"
+                decoding="async"
+                fetchPriority="low"
                 width={1400}
                 height={1000}
                 className="h-full w-full object-cover brightness-[0.75] drop-shadow-none transition-[transform,filter] duration-[1300ms] ease-[var(--ease-luxe)] group-hover:scale-[1.09] group-hover:brightness-100"
@@ -118,6 +120,7 @@ export function Highlights() {
                     <img
                       src={gallery[active]!.src}
                       alt={gallery[active]!.title}
+                      decoding="async"
                       className="max-h-[70vh] w-full object-cover"
                     />
 
@@ -173,6 +176,8 @@ export function Speakers() {
                     src={s.img}
                     alt={`${s.name}, ${s.role}`}
                     loading="lazy"
+                    decoding="async"
+                    fetchPriority="low"
                     width={900}
                     height={1200}
                     className={`h-full w-full object-cover grayscale brightness-95 transition-[transform,filter] duration-[1400ms] ease-[var(--ease-luxe)] group-hover:scale-105 group-hover:grayscale-0 ${s.name === "Dr. Sakshi Sharma" ? "scale-[1.3] group-hover:scale-[1.35]" : ""}`}

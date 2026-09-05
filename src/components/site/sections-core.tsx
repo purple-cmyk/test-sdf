@@ -108,6 +108,8 @@ export function Conference() {
           src={images.confStage}
           alt="SDF Summit main stage"
           loading="lazy"
+          decoding="async"
+          fetchPriority="low"
           width={1600}
           height={1000}
           className="h-full w-full object-cover opacity-[0.25]"

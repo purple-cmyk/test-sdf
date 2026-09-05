@@ -4,6 +4,8 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import { gallery } from "./data";
 
+const cinematicGallery = gallery.slice(0, 6);
+
 export function CinematicGallery() {
   return (
     <section id="past-conferences" aria-label="Last year's conference" className="relative py-20 md:py-28">
@@ -26,12 +28,12 @@ export function CinematicGallery() {
         loop
         grabCursor
         freeMode={{ enabled: true, momentum: true, momentumRatio: 0.35 }}
-        speed={4200}
-        autoplay={{ delay: 1, disableOnInteraction: false, pauseOnMouseEnter: true }}
+        speed={900}
+        autoplay={{ delay: 2600, disableOnInteraction: false, pauseOnMouseEnter: true }}
         allowTouchMove
         className="!px-[3vw]"
       >
-        {[...gallery, ...gallery].map((item, i) => (
+        {[...cinematicGallery, ...cinematicGallery].map((item, i) => (
           <SwiperSlide
             key={`${item.title}-${i}`}
             className="!w-[78vw] sm:!w-[46vw] lg:!w-[32vw]"
@@ -41,6 +43,8 @@ export function CinematicGallery() {
                 src={item.src}
                 alt={`${item.title} — ${item.location}, ${item.year}`}
                 loading="lazy"
+                decoding="async"
+                fetchPriority="low"
                 width={1400}
                 height={1000}
                 className="h-full w-full scale-[1.04] object-cover brightness-[0.78] saturate-[1.05] drop-shadow-none transition-[transform,filter] duration-[1400ms] ease-[var(--ease-luxe)] group-hover:scale-110 group-hover:brightness-100"

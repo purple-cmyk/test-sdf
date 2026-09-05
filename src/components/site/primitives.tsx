@@ -140,7 +140,10 @@ export function Section({
   return (
     <section
       id={id}
-      className={cn("relative w-full px-6 py-28 md:px-10 md:py-40", className)}
+      className={cn(
+        "relative w-full [content-visibility:auto] [contain-intrinsic-size:700px] px-6 py-28 md:px-10 md:py-40",
+        className,
+      )}
     >
       <div className="mx-auto w-full max-w-7xl">{children}</div>
     </section>

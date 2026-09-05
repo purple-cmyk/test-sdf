@@ -8,19 +8,26 @@ export function SmoothScroll() {
     let raf = 0;
     let cancelled = false;
 
-    import("lenis").then(({ default: Lenis }) => {
+    const start = () => {
       if (cancelled) return;
-      const instance = new Lenis({ duration: 1.15, smoothWheel: true, lerp: 0.09 });
-      lenis = instance;
-      const loop = (time: number) => {
-        instance.raf(time);
+
+      import("lenis").then(({ default: Lenis }) => {
+        if (cancelled) return;
+        const instance = new Lenis({ duration: 1.15, smoothWheel: true, lerp: 0.09 });
+        lenis = instance;
+        const loop = (time: number) => {
+          instance.raf(time);
+          raf = requestAnimationFrame(loop);
+        };
         raf = requestAnimationFrame(loop);
-      };
-      raf = requestAnimationFrame(loop);
-    });
+      });
+    };
+
+    const idleTimer = window.setTimeout(start, 1000);
 
     return () => {
       cancelled = true;
+      window.clearTimeout(idleTimer);
       cancelAnimationFrame(raf);
       lenis?.destroy();
     };

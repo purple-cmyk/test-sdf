@@ -1,3 +1,7 @@
+import sakshiSharmaImage from "@/assets/more/_DSC0528.webp";
+import pankajSharmaImage from "@/assets/more/pankaj-sir.webp";
+import santoshKhadsareImage from "@/assets/more/Santosh-Khadsare (1).webp";
+
 const moreImages = Object.values(
   import.meta.glob("@/assets/more/*.webp", {
     eager: true,
@@ -57,7 +61,7 @@ export const speakers = [
     name: "Lt. Col Santosh Khadsare",
     role: "CBO, SysTools",
     org: "Government Cyber Security Division",
-    img: "/1760891997456.webp",
+    img: santoshKhadsareImage,
     topic: "VICE CHAIRMAN",
     accent: "accent" as const,
   },
@@ -65,7 +69,7 @@ export const speakers = [
     name: "Dr. Pankaj Sharma",
     role: "Academia",
     org: "Digital Evidence Lab",
-    img: "/rushimehta.webp",
+    img: pankajSharmaImage,
     topic: "TREASURER",
     accent: "violet" as const,
   },
@@ -73,7 +77,7 @@ export const speakers = [
     name: "Dr. Sakshi Sharma",
     role: "Academia",
     org: "Government Digital Forensic",
-    img: "/1760891997558.webp",
+    img: sakshiSharmaImage,
     topic: "SECRETARY",
     accent: "primary" as const,
   },

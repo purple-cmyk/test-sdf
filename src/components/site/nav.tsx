@@ -255,8 +255,8 @@ import { cn } from "@/lib/utils";
 
 const links = [
   { href: "#about", label: "About Society" },
-  { href: "#membership", label: "Membership" },
-  { href: "#events", label: "Events" },
+  { href: "#join", label: "Membership" },
+  { href: "#highlights", label: "Events" },
   { href: "#join", label: "Contact Us" },
 ];
 
@@ -326,7 +326,7 @@ export function Nav() {
         <div className="flex items-center gap-2">
           {/* Generic CTA */}
           <MagneticLink
-            href="#membership"
+            href="#workshops"
             className="hidden px-5 py-2.5 text-[13px] sm:inline-flex"
           >
             Learn More
@@ -378,7 +378,7 @@ export function Nav() {
 
             {/* Mobile CTA */}
             <a
-              href="#membership"
+              href="#join"
               onClick={() => setOpen(false)}
               className="mt-4 block rounded-full bg-primary px-5 py-3 text-center text-sm font-medium text-primary-foreground"
             >

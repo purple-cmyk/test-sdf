@@ -180,7 +180,7 @@ export function Speakers() {
                     fetchPriority="low"
                     width={900}
                     height={1200}
-                    className={`h-full w-full object-cover grayscale brightness-95 transition-[transform,filter] duration-[1400ms] ease-[var(--ease-luxe)] group-hover:scale-105 group-hover:grayscale-0 ${s.name === "Dr. Sakshi Sharma" ? "scale-[1.3] group-hover:scale-[1.35]" : ""}`}
+                    className={`h-full w-full object-cover grayscale-0 brightness-95 transition-[transform,filter] duration-[1400ms] ease-[var(--ease-luxe)] sm:grayscale group-hover:scale-105 group-hover:grayscale-0 ${s.name === "Dr. Sakshi Sharma" ? "scale-[1.3] group-hover:scale-[1.35]" : ""}`}
                   />
 
                   <div className="absolute inset-0 bg-[linear-gradient(to_top,var(--background),transparent_55%)]" />

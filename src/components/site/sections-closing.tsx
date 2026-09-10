@@ -11,7 +11,7 @@ import {
   Twitter,
 } from "lucide-react";
 import { MagneticLink, Reveal, Section, SectionHeading } from "./primitives";
-import { faqs, sponsors, testimonials } from "./data";
+import { sponsors, testimonials } from "./data";
 
 /* ---------------------- SECTION 08 — SPONSORS ------------------------- */
 export function Sponsors() {
@@ -115,55 +115,56 @@ export function Join() {
 }
 
 /* ------------------------- SECTION 11 — FAQ --------------------------- */
-export function Faq() {
-  const [open, setOpen] = useState<number | null>(0);
-  return (
-    <Section id="faq">
-      <div className="grid gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:gap-24">
-        <SectionHeading index="" eyebrow="" title="Answers, before you ask." />
-        <ul className="flex flex-col">
-          {faqs.map((f, i) => {
-            const isOpen = open === i;
-            return (
-              <li key={f.q} className="border-b border-border">
-                <h3>
-                  <button
-                    type="button"
-                    onClick={() => setOpen(isOpen ? null : i)}
-                    aria-expanded={isOpen}
-                    className="group flex w-full items-center justify-between gap-6 py-6 text-left"
-                  >
-                    <span className="font-display text-lg leading-snug font-medium tracking-tight transition-colors duration-500 group-hover:text-primary md:text-xl">
-                      {f.q}
-                    </span>
-                    <span className="grid h-8 w-8 shrink-0 place-items-center rounded-full border border-border transition-colors duration-500 group-hover:border-primary/60 group-hover:text-primary">
-                      {isOpen ? <Minus className="h-3.5 w-3.5" /> : <Plus className="h-3.5 w-3.5" />}
-                    </span>
-                  </button>
-                </h3>
-                <AnimatePresence initial={false}>
-                  {isOpen ? (
-                    <motion.div
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: "auto", opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.6, ease: [0.19, 1, 0.22, 1] }}
-                      className="overflow-hidden"
-                    >
-                      <p className="max-w-xl pb-7 text-sm leading-relaxed text-muted-foreground">
-                        {f.a}
-                      </p>
-                    </motion.div>
-                  ) : null}
-                </AnimatePresence>
-              </li>
-            );
-          })}
-        </ul>
-      </div>
-    </Section>
-  );
-}
+// Temporarily disabled: kept for future reuse.
+// export function Faq() {
+//   const [open, setOpen] = useState<number | null>(0);
+//   return (
+//     <Section id="faq">
+//       <div className="grid gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:gap-24">
+//         <SectionHeading index="" eyebrow="" title="Answers, before you ask." />
+//         <ul className="flex flex-col">
+//           {faqs.map((f, i) => {
+//             const isOpen = open === i;
+//             return (
+//               <li key={f.q} className="border-b border-border">
+//                 <h3>
+//                   <button
+//                     type="button"
+//                     onClick={() => setOpen(isOpen ? null : i)}
+//                     aria-expanded={isOpen}
+//                     className="group flex w-full items-center justify-between gap-6 py-6 text-left"
+//                   >
+//                     <span className="font-display text-lg leading-snug font-medium tracking-tight transition-colors duration-500 group-hover:text-primary md:text-xl">
+//                       {f.q}
+//                     </span>
+//                     <span className="grid h-8 w-8 shrink-0 place-items-center rounded-full border border-border transition-colors duration-500 group-hover:border-primary/60 group-hover:text-primary">
+//                       {isOpen ? <Minus className="h-3.5 w-3.5" /> : <Plus className="h-3.5 w-3.5" />}
+//                     </span>
+//                   </button>
+//                 </h3>
+//                 <AnimatePresence initial={false}>
+//                   {isOpen ? (
+//                     <motion.div
+//                       initial={{ height: 0, opacity: 0 }}
+//                       animate={{ height: "auto", opacity: 1 }}
+//                       exit={{ height: 0, opacity: 0 }}
+//                       transition={{ duration: 0.6, ease: [0.19, 1, 0.22, 1] }}
+//                       className="overflow-hidden"
+//                     >
+//                       <p className="max-w-xl pb-7 text-sm leading-relaxed text-muted-foreground">
+//                         {f.a}
+//                       </p>
+//                     </motion.div>
+//                   ) : null}
+//                 </AnimatePresence>
+//               </li>
+//             );
+//           })}
+//         </ul>
+//       </div>
+//     </Section>
+//   );
+// }
 
 /* ------------------------ SECTION 12 — FOOTER ------------------------- */
 export function Footer() {

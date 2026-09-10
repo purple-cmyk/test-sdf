@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import { AnimatePresence, motion } from "framer-motion";
-import { Github, Linkedin, Twitter, X, Zap } from "lucide-react";
+import { X, Zap } from "lucide-react";
 import {
   MagneticLink,
   Reveal,
@@ -185,19 +185,6 @@ export function Speakers() {
 
                   <div className="absolute inset-0 bg-[linear-gradient(to_top,var(--background),transparent_55%)]" />
 
-                  <div className="absolute inset-x-4 bottom-4 flex gap-2 opacity-0 transition-all duration-700 group-hover:opacity-100">
-                    {[Twitter, Linkedin, Github].map((Icon, k) => (
-                      <span
-                        key={k}
-                        className="grid h-8 w-8 translate-y-3 place-items-center rounded-full border border-border bg-background/50 backdrop-blur transition-all duration-500 group-hover:translate-y-0 hover:border-primary/60 hover:text-primary"
-                        style={{
-                          transitionDelay: `${k * 70}ms`,
-                        }}
-                      >
-                        <Icon className="h-3.5 w-3.5" />
-                      </span>
-                    ))}
-                  </div>
                 </div>
 
                 <div className="p-5">

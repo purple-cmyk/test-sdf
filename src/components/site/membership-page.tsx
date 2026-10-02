@@ -231,7 +231,7 @@ const membershipPlans = [
     lifetimeHref: "#",
   },
   {
-    type: "Individual Professional",
+    type: "Individual Plan",
     details:
       "For practicing professionals and investigators seeking long-term engagement.",
     yearly: "₹1,000",
@@ -248,8 +248,8 @@ const membershipPlans = [
     type: "Corporate Below ₹50 Lakh",
     details: "For organizations with turnover below ₹50 lakh.",
     yearly: "₹25,000",
-    fiveYear: "₹75,000",
-    lifetime: "₹1,00,000",
+    fiveYear: "₹1,00,000",
+    lifetime: "₹1,50,000",
     yearlyHref: "#",
     fiveYearHref: "#",
     lifetimeHref: "#",
@@ -258,8 +258,8 @@ const membershipPlans = [
     type: "Corporate ₹50 Lakh – ₹1 Crore",
     details: "For organizations with turnover from ₹50 lakh to ₹1 crore.",
     yearly: "₹50,000",
-    fiveYear: "₹1,50,000",
-    lifetime: "₹2,00,000",
+    fiveYear: "₹2,00,000",
+    lifetime: "₹3,00,000",
     yearlyHref: "#",
     fiveYearHref: "#",
     lifetimeHref: "#",
@@ -268,8 +268,8 @@ const membershipPlans = [
     type: "Corporate ₹1 – ₹3 Crore",
     details: "For organizations with turnover from ₹1 crore to ₹3 crore.",
     yearly: "₹1,25,000",
-    fiveYear: "₹3,75,000",
-    lifetime: "₹5,00,000",
+    fiveYear: "₹5,00,000",
+    lifetime: "₹7,50,000",
     yearlyHref: "#",
     fiveYearHref: "#",
     lifetimeHref: "#",
@@ -277,9 +277,9 @@ const membershipPlans = [
   {
     type: "Corporate ₹3 – ₹10 Crore",
     details: "For organizations with turnover from ₹3 crore to ₹10 crore.",
-    yearly: "₹1,90,000",
-    fiveYear: "₹5,75,000",
-    lifetime: "₹7,50,000",
+    yearly: "₹2,00,000",
+    fiveYear: "₹8,00,000",
+    lifetime: "₹10,00,000",
     yearlyHref: "#",
     fiveYearHref: "#",
     lifetimeHref: "#",
@@ -287,9 +287,9 @@ const membershipPlans = [
   {
     type: "Corporate ₹10 – ₹50 Crore",
     details: "For organizations with turnover from ₹10 crore to ₹50 crore.",
-    yearly: "₹2,25,000",
-    fiveYear: "₹7,50,000",
-    lifetime: "₹9,00,000",
+    yearly: "₹3,00,000",
+    fiveYear: "₹12,00,000",
+    lifetime: "₹15,00,000",
     yearlyHref: "#",
     fiveYearHref: "#",
     lifetimeHref: "#",
@@ -297,25 +297,15 @@ const membershipPlans = [
   {
     type: "Corporate ₹50 – ₹100 Crore",
     details: "For organizations with turnover from ₹50 crore to ₹100 crore.",
-    yearly: "₹3,00,000",
-    fiveYear: "₹9,00,000",
-    lifetime: "₹12,00,000",
-    yearlyHref: "#",
-    fiveYearHref: "#",
-    lifetimeHref: "#",
-  },
-  {
-    type: "Corporate ₹100 Crore+",
-    details: "For organizations with turnover of ₹100 crore or more.",
     yearly: "₹5,00,000",
-    fiveYear: "₹15,00,000",
+    fiveYear: "₹17,50,000",
     lifetime: "₹20,00,000",
     yearlyHref: "#",
     fiveYearHref: "#",
     lifetimeHref: "#",
   },
   {
-    type: "Corporate < 100 Cr",
+    type: "Corporate ₹100 Crore+",
     details:
       "Custom institutional partnerships and strategic collaboration terms.",
     yearly: "Custom",
@@ -478,7 +468,7 @@ export function MembershipPage() {
           <Mail className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
 
           <p className="text-sm leading-relaxed text-muted-foreground">
-            Corporate memberships above ₹10 crore turnover are available on a
+            Corporate memberships above ₹100 crore turnover are available on a
             custom institutional basis. Contact us for partnership terms and
             pricing.
           </p>

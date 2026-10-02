@@ -138,7 +138,7 @@ export function Hero() {
           </span>
 
           <span className="mt-2 block whitespace-nowrap text-[clamp(1.5rem,4.4vw,4.4rem)] leading-[0.92] text-slate-900">
-            <SplitWords text="FOR" delay={0.4} stagger={0.07} />
+            <SplitWords text="OF" delay={0.4} stagger={0.07} />
           </span>
 
           <span className="mt-2 block whitespace-nowrap text-[clamp(2rem,6.5vw,6.4rem)] leading-[0.92] text-accent text-glow">

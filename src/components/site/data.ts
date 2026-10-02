@@ -40,13 +40,13 @@ export const gallery = moreImages.slice(0, 12).map((src, index) => ({
   year: "2025",
 }));
 
-export const stats = [
-  { label: "Active Members", value: 2400, suffix: "+" },
-  { label: "Years Operating", value: 12, suffix: "" },
-  { label: "Events Hosted", value: 186, suffix: "" },
-  { label: "Workshops Run", value: 340, suffix: "+" },
-  { label: "Awards Won", value: 27, suffix: "" },
-];
+// export const stats = [
+//   { label: "Active Members", value: 2400, suffix: "+" },
+//   { label: "Years Operating", value: 12, suffix: "" },
+//   { label: "Events Hosted", value: 186, suffix: "" },
+//   { label: "Workshops Run", value: 340, suffix: "+" },
+//   { label: "Awards Won", value: 27, suffix: "" },
+// ];
 
 export const speakers = [
   {
@@ -110,14 +110,6 @@ export const workshops = [
   },
 ];
 
-export const timeline = [
-  { year: "2014", title: "Founded", desc: "A shared effort to bring security research, practice, and public-interest dialogue together." },
-  { year: "2017", title: "Research Focus", desc: "A stronger emphasis on evidence-driven inquiry and applied digital forensic." },
-  { year: "2019", title: "Conference Launched", desc: "An annual gathering of researchers, industry voices, and policy-minded practitioners." },
-  { year: "2022", title: "Policy Engagement", desc: "Greater attention to governance, accountability, and the practical use of security research." },
-  { year: "2024", title: "Leadership Dialogue", desc: "Expanded conversations across institutions, researchers, and technology leaders." },
-  { year: "2026", title: "SDF Summit", desc: "A high-level research and industry gathering focused on digital trust and public-interest security." },
-];
 
 export const agenda = [
   { time: "09:00", title: "Registration & Welcome", tag: "Atrium" },
@@ -135,55 +127,55 @@ export const sponsors = [
   "SKILLSDA",
   "CYETHACK SOLUTIONS",
   "IDEFENCE",
-  "PELORUS FORENSIC CYBERTECH",
+  "PELORUS TECH SOLUTIONS",
 ];
 
-export const testimonials = [
-  {
-    quote:
-      "The most intellectually honest gathering I attend. It brings together the people doing the work and the people shaping the conversation around it.",
-    name: "Priya Menon",
-    role: "Security Architect, Quanta",
-  },
-  {
-    quote:
-      "What stands out is the quality of discussion. It is serious, practical, and grounded in real problems rather than buzzwords.",
-    name: "Tom Bergström",
-    role: "IR Analyst, Obsidian",
-  },
-  {
-    quote:
-      "This is where serious conversations about evidence, trust, and digital resilience actually happen. The signal is high and the room is thoughtful.",
-    name: "Sarah Klein",
-    role: "VP Engineering, Vertex",
-  },
-  {
-    quote:
-      "A rare mix of technical depth and policy awareness. It is the kind of gathering that makes the industry sharper.",
-    name: "Andre Costa",
-    role: "Firmware Engineer, Ironclad",
-  },
-];
+// export const testimonials = [
+//   {
+//     quote:
+//       "The most intellectually honest gathering I attend. It brings together the people doing the work and the people shaping the conversation around it.",
+//     name: "Priya Menon",
+//     role: "Security Architect, Quanta",
+//   },
+//   {
+//     quote:
+//       "What stands out is the quality of discussion. It is serious, practical, and grounded in real problems rather than buzzwords.",
+//     name: "Tom Bergström",
+//     role: "IR Analyst, Obsidian",
+//   },
+//   {
+//     quote:
+//       "This is where serious conversations about evidence, trust, and digital resilience actually happen. The signal is high and the room is thoughtful.",
+//     name: "Sarah Klein",
+//     role: "VP Engineering, Vertex",
+//   },
+//   {
+//     quote:
+//       "A rare mix of technical depth and policy awareness. It is the kind of gathering that makes the industry sharper.",
+//     name: "Andre Costa",
+//     role: "Firmware Engineer, Ironclad",
+//   },
+// ];
 
-export const faqs = [
-  {
-    q: "Who can join the society?",
-    a: "Anyone with a serious interest in security — students, professionals, and self-taught researchers. There is no entrance exam, only curiosity and a commitment to ethical practice.",
-  },
-  {
-    q: "Do I need prior experience?",
-    a: "No. Roughly a third of our members join with no technical background. We run a structured beginner track covering networking, Linux, and fundamentals before you touch offensive tooling.",
-  },
-  {
-    q: "What does conference registration include?",
-    a: "Full access to all three days, every workshop track subject to capacity, the CTF, meals, and the recorded session archive released two weeks after the event.",
-  },
-  {
-    q: "Are scholarships available?",
-    a: "Yes. We reserve 15% of seats for fully funded scholarship places, including travel support. Applications open eight weeks before the conference.",
-  },
-  {
-    q: "Is there a code of conduct?",
-    a: "Absolutely. All members and attendees agree to our code of conduct and responsible disclosure policy. Violations are handled swiftly and transparently.",
-  },
-];
+// export const faqs = [
+//   {
+//     q: "Who can join the society?",
+//     a: "Anyone with a serious interest in security — students, professionals, and self-taught researchers. There is no entrance exam, only curiosity and a commitment to ethical practice.",
+//   },
+//   {
+//     q: "Do I need prior experience?",
+//     a: "No. Roughly a third of our members join with no technical background. We run a structured beginner track covering networking, Linux, and fundamentals before you touch offensive tooling.",
+//   },
+//   {
+//     q: "What does conference registration include?",
+//     a: "Full access to all three days, every workshop track subject to capacity, the CTF, meals, and the recorded session archive released two weeks after the event.",
+//   },
+//   {
+//     q: "Are scholarships available?",
+//     a: "Yes. We reserve 15% of seats for fully funded scholarship places, including travel support. Applications open eight weeks before the conference.",
+//   },
+//   {
+//     q: "Is there a code of conduct?",
+//     a: "Absolutely. All members and attendees agree to our code of conduct and responsible disclosure policy. Violations are handled swiftly and transparently.",
+//   },
+// ];

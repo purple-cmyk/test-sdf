@@ -11,7 +11,7 @@ import {
   Twitter,
 } from "lucide-react";
 import { MagneticLink, Reveal, Section, SectionHeading } from "./primitives";
-import { sponsors, testimonials } from "./data";
+import { sponsors } from "./data";
 
 /* ---------------------- SECTION 08 — SPONSORS ------------------------- */
 export function Sponsors() {
@@ -33,36 +33,6 @@ export function Sponsors() {
                 </span>
               ))}
             </div>
-          ))}
-        </div>
-      </div>
-    </Section>
-  );
-}
-
-/* -------------------- SECTION 09 — TESTIMONIALS ----------------------- */
-export function Testimonials() {
-  const row = [...testimonials, ...testimonials];
-  return (
-    <Section id="testimonials">
-      <SectionHeading index="" eyebrow="" title="What members say." align="center" />
-      <div className="relative mt-16 overflow-hidden [mask-image:linear-gradient(90deg,transparent,black_10%,black_90%,transparent)]">
-        <div className="flex w-max animate-marquee-slow gap-5 hover:[animation-play-state:paused]">
-          {row.map((t, i) => (
-            <figure
-              key={`${t.name}-${i}`}
-              className="glass w-[86vw] shrink-0 rounded-sm p-8 transition-transform duration-700 ease-[var(--ease-luxe)] hover:-translate-y-2 sm:w-[420px]"
-            >
-              <blockquote className="text-[15px] leading-relaxed text-foreground/90">
-                “{t.quote}”
-              </blockquote>
-              <figcaption className="mt-7 border-t border-border/70 pt-5">
-                <p className="font-display text-sm font-medium tracking-tight">{t.name}</p>
-                <p className="mt-1 font-mono text-[10px] tracking-[0.2em] text-muted-foreground">
-                  {t.role.toUpperCase()}
-                </p>
-              </figcaption>
-            </figure>
           ))}
         </div>
       </div>
@@ -193,4 +163,3 @@ export function Footer() {
     </footer>
   );
 }
-

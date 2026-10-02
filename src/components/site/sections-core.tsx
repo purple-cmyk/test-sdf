@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
-import { motion, useReducedMotion } from "framer-motion";
 import { CalendarDays, MapPin, Sparkles, ArrowUpRight } from "lucide-react";
-import { Counter, MagneticLink, Reveal, Section, SectionHeading } from "./primitives";
-import { agenda, images, stats, timeline } from "./data";
+import { MagneticLink, Reveal, Section, SectionHeading } from "./primitives";
+import { images } from "./data";
 
 /* ------------------------- SECTION 02 — ABOUT ------------------------- */
 export function About() {
@@ -173,4 +172,3 @@ export function Conference() {
     </section>
   );
 }
-

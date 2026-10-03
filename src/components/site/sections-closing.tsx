@@ -69,7 +69,7 @@ export function Join() {
               className="group relative inline-flex items-center gap-3 overflow-hidden rounded-full bg-[#111827] px-7 py-3.5 font-sans text-sm font-medium tracking-tight text-white transition-colors duration-300 hover:bg-[#1f2937]"
             >
               <span className="relative z-10 flex items-center gap-2.5">
-                Support Our Mission
+                Apply For Membership
                 <ArrowRight className="h-4 w-4 transition-transform duration-500 group-hover:translate-x-1" />
               </span>
               <span className="pointer-events-none absolute inset-0 -translate-x-full bg-[linear-gradient(110deg,transparent,color-mix(in_oklab,var(--primary)_18%,transparent),transparent)] transition-transform duration-[1100ms] ease-[var(--ease-luxe)] group-hover:translate-x-full" />
@@ -78,7 +78,7 @@ export function Join() {
               href="mailto:contact@societyofdigitalforensic.com"
               variant="ghost"
             >
-              <Mail className="h-4 w-4 text-accent" /> Contact the board
+              <Mail className="h-4 w-4 text-accent" /> Contact Us
             </MagneticLink>
           </div>
         </Reveal>

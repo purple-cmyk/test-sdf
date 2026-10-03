@@ -255,7 +255,7 @@ import { cn } from "@/lib/utils";
 
 const links = [
   { href: "#about", label: "About Society" },
-  { href: "#join", label: "Membership" },
+  { href: "/membership", label: "Membership" },
   { href: "#highlights", label: "Events" },
   { href: "#join", label: "Contact Us" },
 ];

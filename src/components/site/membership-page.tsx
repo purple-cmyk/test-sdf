@@ -472,19 +472,48 @@ export function MembershipPage() {
           </div>
         </div>
 
+        <section
+          aria-labelledby="membership-benefits-title"
+          className="mt-10 border-y border-primary/30 bg-primary/5 px-5 py-7 md:px-8 md:py-9"
+        >
+          <h2
+            id="membership-benefits-title"
+            className="font-display text-2xl tracking-tight md:text-3xl"
+          >
+            Benefits of Membership
+          </h2>
+
+          <ol className="mt-6 grid gap-x-12 gap-y-5 md:grid-cols-2">
+            <li className="flex items-start gap-3 text-[15px] leading-relaxed text-muted-foreground md:text-base">
+              <span className="font-mono text-xs font-semibold text-primary">01</span>
+              <span>Priority consideration for <b>Complimentary access to National and International events and conferences </b>organized by the Society, including <b>ICDF 2027</b>.</span>
+            </li>
+            <li className="flex items-start gap-3 text-[15px] leading-relaxed text-muted-foreground md:text-base">
+              <span className="font-mono text-xs font-semibold text-primary">02</span>
+              <span>Exclusive Discounts on <b>Conference Registration Fee and Sponsorship Fee</b> for society members.</span>
+            </li>
+            <li className="flex items-start gap-3 text-[15px] leading-relaxed text-muted-foreground md:text-base">
+              <span className="font-mono text-xs font-semibold text-primary">03</span>
+              <span>Exclusive access to the <b> Digital Forensics India Community</b> for Networking and Opportunities.</span>
+            </li>
+            <li className="flex items-start gap-3 text-[15px] leading-relaxed text-muted-foreground md:text-base">
+              <span className="font-mono text-xs font-semibold text-primary">04</span>
+              <span>Exclusive guidance from society experts for members/ member organisations.
+                </span>
+            </li>
+          </ol>
+        </section>
+
         {/* Information Note */}
         <div className="mt-6 flex items-start gap-3 rounded-sm border border-border bg-surface/30 p-5">
           <Mail className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
 
           <p className="text-[15px] leading-relaxed text-muted-foreground md:text-[16px]">
-            Corporate memberships above ₹100 crore turnover are available on a
-            custom institutional basis. Contact us for partnership terms and
-            pricing.
+            For any queries regarding membership, please reach out to us at <b>{"contact@societyofdigitalforensic.com "} </b>
           </p>
         </div>
 
         <p className="mt-4 text-center font-mono text-[11px] uppercase tracking-[0.16em] text-muted-foreground md:text-[12px]">
-          Exclusive of Taxes
         </p>
       </div>
     </div>

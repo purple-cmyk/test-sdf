@@ -219,6 +219,8 @@ import { ArrowLeft, Mail } from "lucide-react";
 
 const signupFormUrl =
   "https://docs.google.com/forms/d/e/1FAIpQLSf3MpkGm82EpVyrk54oAECx9tFwtE7qN5hYJkHNsbl4jb8OEg/viewform";
+const corporateFormUrl = "https://forms.gle/pTfB5ULUERtoqnVH7";
+const corporateEmailUrl = "mailto:office@societyofdigitalforensic.com";
 
 const membershipPlans = [
   {
@@ -249,9 +251,9 @@ const membershipPlans = [
     yearly: "₹25,000",
     fiveYear: "₹1,00,000",
     lifetime: "₹1,50,000",
-    yearlyHref: signupFormUrl,
-    fiveYearHref: signupFormUrl,
-    lifetimeHref: signupFormUrl,
+    yearlyHref: corporateFormUrl,
+    fiveYearHref: corporateFormUrl,
+    lifetimeHref: corporateFormUrl,
   },
   {
     type: "Corporate ₹50 Lakh – ₹1 Crore",
@@ -259,9 +261,9 @@ const membershipPlans = [
     yearly: "₹50,000",
     fiveYear: "₹2,00,000",
     lifetime: "₹3,00,000",
-    yearlyHref: signupFormUrl,
-    fiveYearHref: signupFormUrl,
-    lifetimeHref: signupFormUrl,
+    yearlyHref: corporateFormUrl,
+    fiveYearHref: corporateFormUrl,
+    lifetimeHref: corporateFormUrl,
   },
   {
     type: "Corporate ₹1 – ₹3 Crore",
@@ -269,9 +271,9 @@ const membershipPlans = [
     yearly: "₹1,25,000",
     fiveYear: "₹5,00,000",
     lifetime: "₹7,50,000",
-    yearlyHref: signupFormUrl,
-    fiveYearHref: signupFormUrl,
-    lifetimeHref: signupFormUrl,
+    yearlyHref: corporateFormUrl,
+    fiveYearHref: corporateFormUrl,
+    lifetimeHref: corporateFormUrl,
   },
   {
     type: "Corporate ₹3 – ₹10 Crore",
@@ -279,9 +281,9 @@ const membershipPlans = [
     yearly: "₹2,00,000",
     fiveYear: "₹8,00,000",
     lifetime: "₹10,00,000",
-    yearlyHref: signupFormUrl,
-    fiveYearHref: signupFormUrl,
-    lifetimeHref: signupFormUrl,
+    yearlyHref: corporateFormUrl,
+    fiveYearHref: corporateFormUrl,
+    lifetimeHref: corporateFormUrl,
   },
   {
     type: "Corporate ₹10 – ₹50 Crore",
@@ -289,9 +291,9 @@ const membershipPlans = [
     yearly: "₹3,00,000",
     fiveYear: "₹12,00,000",
     lifetime: "₹15,00,000",
-    yearlyHref: signupFormUrl,
-    fiveYearHref: signupFormUrl,
-    lifetimeHref: signupFormUrl,
+    yearlyHref: corporateFormUrl,
+    fiveYearHref: corporateFormUrl,
+    lifetimeHref: corporateFormUrl,
   },
   {
     type: "Corporate ₹50 – ₹100 Crore",
@@ -299,9 +301,9 @@ const membershipPlans = [
     yearly: "₹5,00,000",
     fiveYear: "₹17,50,000",
     lifetime: "₹20,00,000",
-    yearlyHref: signupFormUrl,
-    fiveYearHref: signupFormUrl,
-    lifetimeHref: signupFormUrl,
+    yearlyHref: corporateEmailUrl,
+    fiveYearHref: corporateEmailUrl,
+    lifetimeHref: corporateEmailUrl,
   },
   {
     type: "Corporate ₹100 Crore+",
@@ -310,9 +312,9 @@ const membershipPlans = [
     yearly: "Custom",
     fiveYear: "Custom",
     lifetime: "Custom",
-    yearlyHref: signupFormUrl,
-    fiveYearHref: signupFormUrl,
-    lifetimeHref: signupFormUrl,
+    yearlyHref: corporateEmailUrl,
+    fiveYearHref: corporateEmailUrl,
+    lifetimeHref: corporateEmailUrl,
   },
 ];
 

@@ -12,7 +12,7 @@ import { ParticleField } from "./atmosphere";
 function Ticker() {
   const items = [
     "ACCEPTING PAPERS FOR 2027",
-    "11.9 IFIP DIGITAL FORENSIC CONFERENCE",
+    "11.9 WG IFIP DIGITAL FORENSIC CONFERENCE",
     "CALL FOR PAPERS NOW OPEN",
     "SUBMIT YOUR RESEARCH",
   ];
@@ -186,7 +186,9 @@ export function Hero() {
           className="mt-11 flex w-full max-w-md flex-col items-stretch gap-3 sm:max-w-none sm:flex-row sm:justify-center"
         >
           <MagneticLink
-            href="#join"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSf3MpkGm82EpVyrk54oAECx9tFwtE7qN5hYJkHNsbl4jb8OEg/viewform"
+            target="_blank"
+            rel="noopener noreferrer"
             className="w-full justify-center sm:w-auto"
           >
             <Lock className="h-4 w-4" />

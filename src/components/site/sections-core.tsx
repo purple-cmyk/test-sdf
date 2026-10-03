@@ -121,7 +121,7 @@ export function Conference() {
           <SectionHeading
             index=""
             eyebrow=""
-            title="SDF SUMMIT 2027"
+            title="ICDF 2027"
             description="Three days of original research, adversarial simulation, and hands-on training — all under one roof, with the people who are actually doing the work."
           />
 
@@ -162,7 +162,13 @@ export function Conference() {
               </p>
             </div>
 
-            <MagneticLink href="#past-conferences" variant="accent" className="mt-8 w-full justify-center">
+            <MagneticLink
+              href="https://www.ifip119.org/Conferences/"
+              target="_blank"
+              rel="noopener noreferrer"
+              variant="accent"
+              className="mt-8 w-full justify-center"
+            >
               View past conferences
               <ArrowUpRight className="h-4 w-4 transition-transform duration-500 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </MagneticLink>

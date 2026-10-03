@@ -344,7 +344,7 @@ function PriceOption({
             {price}
           </span>
           {showOriginalPrice && originalPrice ? (
-            <span className="text-[11px] font-medium text-red-500 line-through decoration-red-500 decoration-2 md:text-[12px]">
+            <span className="text-[16px] font-semibold text-red-500 line-through decoration-red-500 decoration-[3px] md:text-[18px]">
               {originalPrice}
             </span>
           ) : null}
@@ -385,7 +385,7 @@ export function MembershipPage() {
             cyber investigations, and secure systems.
           </p>
 
-          <div className="mt-6 inline-flex items-center rounded-full border border-primary/30 bg-primary/5 px-3 py-1.5 text-[15px] font-semibold text-primary md:text-base">
+          <div className="mt-6 inline-flex items-center rounded-full border border-red-500/30 bg-red-500/5 px-3 py-1.5 text-[15px] font-semibold text-red-600 md:text-base">
             Inaugural Discount : 50% off for all memberships for Students and Individuals.
           </div>
         </div>

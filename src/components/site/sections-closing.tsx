@@ -74,7 +74,10 @@ export function Join() {
               </span>
               <span className="pointer-events-none absolute inset-0 -translate-x-full bg-[linear-gradient(110deg,transparent,color-mix(in_oklab,var(--primary)_18%,transparent),transparent)] transition-transform duration-[1100ms] ease-[var(--ease-luxe)] group-hover:translate-x-full" />
             </Link>
-            <MagneticLink href="mailto:hello@cybersecuritysociety.org" variant="ghost">
+            <MagneticLink
+              href="mailto:contact@societyofdigitalforensic.com"
+              variant="ghost"
+            >
               <Mail className="h-4 w-4 text-accent" /> Contact the board
             </MagneticLink>
           </div>

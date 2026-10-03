@@ -344,7 +344,7 @@ function PriceOption({
             {price}
           </span>
           {showOriginalPrice && originalPrice ? (
-            <span className="text-[16px] font-semibold text-red-500 line-through decoration-red-500 decoration-[3px] md:text-[18px]">
+            <span className="text-[16px] font-semibold text-red-400/80 line-through decoration-red-400/80 decoration-[1.5px] md:text-[18px]">
               {originalPrice}
             </span>
           ) : null}
@@ -386,7 +386,7 @@ export function MembershipPage() {
           </p>
 
           <div className="mt-6 inline-flex items-center rounded-full border border-red-500/30 bg-red-500/5 px-3 py-1.5 text-[15px] font-semibold text-red-600 md:text-base">
-            Inaugural Offer : 50% discount for all memberships for Students and Individuals.
+            Inaugural Offer : 50% discount on all memberships for Students and Individuals.
           </div>
         </div>
 

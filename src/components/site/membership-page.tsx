@@ -217,6 +217,30 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowLeft, Mail } from "lucide-react";
 
+const formatIndianCurrency = (value: number) =>
+  new Intl.NumberFormat("en-IN", {
+    style: "currency",
+    currency: "INR",
+    maximumFractionDigits: 0,
+  }).format(value);
+
+const getOriginalPrice = (price: string) => {
+  if (!price || price === "Custom") {
+    return "";
+  }
+
+  const numericValue = Number(price.replace(/[^\d]/g, ""));
+
+  if (!Number.isFinite(numericValue) || numericValue <= 0) {
+    return "";
+  }
+
+  return formatIndianCurrency(numericValue * 2);
+};
+
+const signupFormUrl =
+  "https://docs.google.com/forms/d/e/1FAIpQLSf3MpkGm82EpVyrk54oAECx9tFwtE7qN5hYJkHNsbl4jb8OEg/viewform";
+
 const membershipPlans = [
   {
     type: "Student Plan",
@@ -225,10 +249,9 @@ const membershipPlans = [
     yearly: "₹500",
     fiveYear: "",
     lifetime: "",
-    yearlyHref:
-      "mailto:membership@cybersecuritysociety.org?subject=Student%20Membership%20Application",
-    fiveYearHref: "#",
-    lifetimeHref: "#",
+    yearlyHref: signupFormUrl,
+    fiveYearHref: signupFormUrl,
+    lifetimeHref: signupFormUrl,
   },
   {
     type: "Individual Plan",
@@ -237,12 +260,9 @@ const membershipPlans = [
     yearly: "₹1,000",
     fiveYear: "₹4,000",
     lifetime: "₹10,000",
-    yearlyHref:
-      "mailto:membership@cybersecuritysociety.org?subject=Professional%20Membership%20Application",
-    fiveYearHref:
-      "mailto:membership@cybersecuritysociety.org?subject=Professional%20Membership%20Application",
-    lifetimeHref:
-      "mailto:membership@cybersecuritysociety.org?subject=Professional%20Membership%20Application",
+    yearlyHref: signupFormUrl,
+    fiveYearHref: signupFormUrl,
+    lifetimeHref: signupFormUrl,
   },
   {
     type: "Corporate Below ₹50 Lakh",
@@ -250,9 +270,9 @@ const membershipPlans = [
     yearly: "₹25,000",
     fiveYear: "₹1,00,000",
     lifetime: "₹1,50,000",
-    yearlyHref: "#",
-    fiveYearHref: "#",
-    lifetimeHref: "#",
+    yearlyHref: signupFormUrl,
+    fiveYearHref: signupFormUrl,
+    lifetimeHref: signupFormUrl,
   },
   {
     type: "Corporate ₹50 Lakh – ₹1 Crore",
@@ -260,9 +280,9 @@ const membershipPlans = [
     yearly: "₹50,000",
     fiveYear: "₹2,00,000",
     lifetime: "₹3,00,000",
-    yearlyHref: "#",
-    fiveYearHref: "#",
-    lifetimeHref: "#",
+    yearlyHref: signupFormUrl,
+    fiveYearHref: signupFormUrl,
+    lifetimeHref: signupFormUrl,
   },
   {
     type: "Corporate ₹1 – ₹3 Crore",
@@ -270,9 +290,9 @@ const membershipPlans = [
     yearly: "₹1,25,000",
     fiveYear: "₹5,00,000",
     lifetime: "₹7,50,000",
-    yearlyHref: "#",
-    fiveYearHref: "#",
-    lifetimeHref: "#",
+    yearlyHref: signupFormUrl,
+    fiveYearHref: signupFormUrl,
+    lifetimeHref: signupFormUrl,
   },
   {
     type: "Corporate ₹3 – ₹10 Crore",
@@ -280,9 +300,9 @@ const membershipPlans = [
     yearly: "₹2,00,000",
     fiveYear: "₹8,00,000",
     lifetime: "₹10,00,000",
-    yearlyHref: "#",
-    fiveYearHref: "#",
-    lifetimeHref: "#",
+    yearlyHref: signupFormUrl,
+    fiveYearHref: signupFormUrl,
+    lifetimeHref: signupFormUrl,
   },
   {
     type: "Corporate ₹10 – ₹50 Crore",
@@ -290,9 +310,9 @@ const membershipPlans = [
     yearly: "₹3,00,000",
     fiveYear: "₹12,00,000",
     lifetime: "₹15,00,000",
-    yearlyHref: "#",
-    fiveYearHref: "#",
-    lifetimeHref: "#",
+    yearlyHref: signupFormUrl,
+    fiveYearHref: signupFormUrl,
+    lifetimeHref: signupFormUrl,
   },
   {
     type: "Corporate ₹50 – ₹100 Crore",
@@ -300,9 +320,9 @@ const membershipPlans = [
     yearly: "₹5,00,000",
     fiveYear: "₹17,50,000",
     lifetime: "₹20,00,000",
-    yearlyHref: "#",
-    fiveYearHref: "#",
-    lifetimeHref: "#",
+    yearlyHref: signupFormUrl,
+    fiveYearHref: signupFormUrl,
+    lifetimeHref: signupFormUrl,
   },
   {
     type: "Corporate ₹100 Crore+",
@@ -311,12 +331,9 @@ const membershipPlans = [
     yearly: "Custom",
     fiveYear: "Custom",
     lifetime: "Custom",
-    yearlyHref:
-      "mailto:hello@cybersecuritysociety.org?subject=Corporate%20Membership%20Inquiry",
-    fiveYearHref:
-      "mailto:hello@cybersecuritysociety.org?subject=Corporate%20Membership%20Inquiry",
-    lifetimeHref:
-      "mailto:hello@cybersecuritysociety.org?subject=Corporate%20Membership%20Inquiry",
+    yearlyHref: signupFormUrl,
+    fiveYearHref: signupFormUrl,
+    lifetimeHref: signupFormUrl,
   },
 ];
 
@@ -331,13 +348,22 @@ function PriceOption({
     return <div className="h-16 rounded-md bg-transparent" />;
   }
 
+  const originalPrice = getOriginalPrice(price);
+
   return (
     <a
       href={href}
-      className="group relative flex h-14 flex-col items-center justify-center overflow-hidden rounded-md border border-border bg-background px-2 text-center transition-all duration-300 ease-out hover:border-primary/70 hover:bg-primary/5"
+      className="group relative flex h-16 flex-col items-center justify-center overflow-hidden rounded-md border border-border bg-background px-2 text-center transition-all duration-300 ease-out hover:border-primary/70 hover:bg-primary/5"
     >
       <div className="flex flex-col items-center transition-all duration-300 ease-out group-hover:-translate-y-7 group-hover:opacity-0">
-        <span className="text-sm font-medium text-foreground">{price}</span>
+        <div className="flex items-center justify-center gap-2">
+          <span className="text-sm font-medium text-foreground">{price}</span>
+          {originalPrice ? (
+            <span className="text-[11px] font-medium text-red-500 line-through decoration-red-500 decoration-2">
+              {originalPrice}
+            </span>
+          ) : null}
+        </div>
       </div>
 
       <div className="absolute inset-0 flex translate-y-7 items-center justify-center text-sm font-medium text-primary opacity-0 transition-all duration-300 ease-out group-hover:translate-y-0 group-hover:opacity-100">
@@ -373,6 +399,10 @@ export function MembershipPage() {
             professional practice, and community building in digital evidence,
             cyber investigations, and secure systems.
           </p>
+
+          <div className="mt-6 inline-flex items-center rounded-full border border-red-500/30 bg-red-500/5 px-3 py-1.5 text-sm font-semibold text-red-600">
+            Inaugural Discount : 50% off for all memberships
+          </div>
         </div>
 
         {/* Membership Table */}

@@ -386,7 +386,7 @@ export function MembershipPage() {
           </p>
 
           <div className="mt-6 inline-flex items-center rounded-full border border-red-500/30 bg-red-500/5 px-3 py-1.5 text-[15px] font-semibold text-red-600 md:text-base">
-            Inaugural Discount : 50% off for all memberships for Students and Individuals.
+            Inaugural Offer : 50% discount for all memberships for Students and Individuals.
           </div>
         </div>
 

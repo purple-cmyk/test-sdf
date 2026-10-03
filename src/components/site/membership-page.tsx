@@ -217,27 +217,6 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowLeft, Mail } from "lucide-react";
 
-const formatIndianCurrency = (value: number) =>
-  new Intl.NumberFormat("en-IN", {
-    style: "currency",
-    currency: "INR",
-    maximumFractionDigits: 0,
-  }).format(value);
-
-const getOriginalPrice = (price: string) => {
-  if (!price || price === "Custom") {
-    return "";
-  }
-
-  const numericValue = Number(price.replace(/[^\d]/g, ""));
-
-  if (!Number.isFinite(numericValue) || numericValue <= 0) {
-    return "";
-  }
-
-  return formatIndianCurrency(numericValue * 2);
-};
-
 const signupFormUrl =
   "https://docs.google.com/forms/d/e/1FAIpQLSf3MpkGm82EpVyrk54oAECx9tFwtE7qN5hYJkHNsbl4jb8OEg/viewform";
 
@@ -340,33 +319,39 @@ const membershipPlans = [
 function PriceOption({
   price,
   href,
+  showOriginalPrice = false,
 }: {
   price: string;
   href: string;
+  showOriginalPrice?: boolean;
 }) {
   if (!price) {
     return <div className="h-16 rounded-md bg-transparent" />;
   }
 
-  const originalPrice = getOriginalPrice(price);
+  const originalPrice = showOriginalPrice
+    ? `₹${Number(price.replace(/[^\d]/g, "")) * 2}`
+    : "";
 
   return (
     <a
       href={href}
-      className="group relative flex h-16 flex-col items-center justify-center overflow-hidden rounded-md border border-border bg-background px-2 text-center transition-all duration-300 ease-out hover:border-primary/70 hover:bg-primary/5"
+      className="group relative flex h-16 flex-col items-center justify-center overflow-hidden rounded-md border border-border bg-background px-2.5 text-center transition-all duration-300 ease-out hover:border-primary/70 hover:bg-primary/5"
     >
       <div className="flex flex-col items-center transition-all duration-300 ease-out group-hover:-translate-y-7 group-hover:opacity-0">
         <div className="flex items-center justify-center gap-2">
-          <span className="text-sm font-medium text-foreground">{price}</span>
-          {originalPrice ? (
-            <span className="text-[11px] font-medium text-red-500 line-through decoration-red-500 decoration-2">
+          <span className="text-[15px] font-medium text-foreground md:text-[16px]">
+            {price}
+          </span>
+          {showOriginalPrice && originalPrice ? (
+            <span className="text-[11px] font-medium text-red-500 line-through decoration-red-500 decoration-2 md:text-[12px]">
               {originalPrice}
             </span>
           ) : null}
         </div>
       </div>
 
-      <div className="absolute inset-0 flex translate-y-7 items-center justify-center text-sm font-medium text-primary opacity-0 transition-all duration-300 ease-out group-hover:translate-y-0 group-hover:opacity-100">
+      <div className="absolute inset-0 flex translate-y-7 items-center justify-center text-[15px] font-medium text-primary opacity-0 transition-all duration-300 ease-out group-hover:translate-y-0 group-hover:opacity-100 md:text-[16px]">
         {price === "Custom" ? "Contact us" : "Apply now"}
       </div>
     </a>
@@ -375,7 +360,7 @@ function PriceOption({
 
 export function MembershipPage() {
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-background text-foreground" style={{ fontSize: "1.15rem" }}>
       <div className="mx-auto max-w-7xl px-6 py-12 md:px-10 md:py-16">
         {/* Back Home */}
         <Link
@@ -400,43 +385,37 @@ export function MembershipPage() {
             cyber investigations, and secure systems.
           </p>
 
-          <div className="mt-6 inline-flex items-center rounded-full border border-red-500/30 bg-red-500/5 px-3 py-1.5 text-sm font-semibold text-red-600">
-            Inaugural Discount : 50% off for all memberships
+          <div className="mt-6 inline-flex items-center rounded-full border border-primary/30 bg-primary/5 px-3 py-1.5 text-[15px] font-semibold text-primary md:text-base">
+            Inaugural Discount : 50% off for all memberships for Students and Individuals.
           </div>
         </div>
 
         {/* Membership Table */}
         <div className="mt-12 overflow-hidden rounded-sm border border-border bg-surface/40">
           <div className="overflow-x-auto">
-            <table className="min-w-[820px] w-full border-separate border-spacing-0">
+            <table className="min-w-[720px] w-full border-separate border-spacing-0">
               <thead>
                 <tr className="bg-surface/80">
-                  <th className="w-[22%] border-b border-border px-4 py-4 text-left font-medium">
-                    <span className="font-mono text-[10px] uppercase tracking-[0.16em] text-muted-foreground">
+                  <th className="w-[32%] border-b border-border px-4 py-4 text-left font-medium">
+                    <span className="font-mono text-[11px] uppercase tracking-[0.16em] text-muted-foreground md:text-[12px]">
                       Member Type
                     </span>
                   </th>
 
-                  <th className="w-[26%] border-b border-border px-4 py-4 text-left font-medium">
-                    <span className="font-mono text-[10px] uppercase tracking-[0.16em] text-muted-foreground">
-                      Details
-                    </span>
-                  </th>
-
-                  <th className="w-[17%] border-b border-border px-2 py-4 text-center font-medium">
-                    <span className="font-mono text-[10px] uppercase tracking-[0.16em] text-primary">
+                  <th className="w-[22%] border-b border-border px-2 py-4 text-center font-medium">
+                    <span className="font-mono text-[11px] uppercase tracking-[0.16em] text-primary md:text-[12px]">
                       1 Year
                     </span>
                   </th>
 
-                  <th className="w-[17%] border-b border-border px-2 py-4 text-center font-medium">
-                    <span className="font-mono text-[10px] uppercase tracking-[0.16em] text-primary">
+                  <th className="w-[22%] border-b border-border px-2 py-4 text-center font-medium">
+                    <span className="font-mono text-[11px] uppercase tracking-[0.16em] text-primary md:text-[12px]">
                       5 Years
                     </span>
                   </th>
 
-                  <th className="w-[18%] border-b border-border px-2 py-4 text-center font-medium">
-                    <span className="font-mono text-[10px] uppercase tracking-[0.16em] text-primary">
+                  <th className="w-[24%] border-b border-border px-2 py-4 text-center font-medium">
+                    <span className="font-mono text-[11px] uppercase tracking-[0.16em] text-primary md:text-[12px]">
                       Lifetime
                     </span>
                   </th>
@@ -449,41 +428,39 @@ export function MembershipPage() {
                     key={plan.type}
                     className="align-middle transition-colors hover:bg-surface/50"
                   >
-                    {/* Member Type */}
                     <td className="border-b border-border px-4 py-5">
-                      <h3 className="font-display text-lg tracking-tight text-foreground">
+                      <h3 className="font-display text-[1.2rem] tracking-tight text-foreground md:text-[1.35rem]">
                         {plan.type}
                       </h3>
                     </td>
 
-                    {/* Details */}
-                    <td className="border-b border-border px-4 py-5">
-                      <p className="max-w-sm text-xs leading-relaxed text-muted-foreground">
-                        {plan.details}
-                      </p>
-                    </td>
-
-                    {/* 1 Year */}
                     <td className="border-b border-border px-2 py-4">
                       <PriceOption
                         price={plan.yearly}
                         href={plan.yearlyHref}
+                        showOriginalPrice={
+                          plan.type === "Student Plan" || plan.type === "Individual Plan"
+                        }
                       />
                     </td>
 
-                    {/* 5 Years */}
                     <td className="border-b border-border px-2 py-4">
                       <PriceOption
                         price={plan.fiveYear}
                         href={plan.fiveYearHref}
+                        showOriginalPrice={
+                          plan.type === "Student Plan" || plan.type === "Individual Plan"
+                        }
                       />
                     </td>
 
-                    {/* Lifetime */}
                     <td className="border-b border-border px-2 py-4">
                       <PriceOption
                         price={plan.lifetime}
                         href={plan.lifetimeHref}
+                        showOriginalPrice={
+                          plan.type === "Student Plan" || plan.type === "Individual Plan"
+                        }
                       />
                     </td>
                   </tr>
@@ -497,14 +474,14 @@ export function MembershipPage() {
         <div className="mt-6 flex items-start gap-3 rounded-sm border border-border bg-surface/30 p-5">
           <Mail className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
 
-          <p className="text-sm leading-relaxed text-muted-foreground">
+          <p className="text-[15px] leading-relaxed text-muted-foreground md:text-[16px]">
             Corporate memberships above ₹100 crore turnover are available on a
             custom institutional basis. Contact us for partnership terms and
             pricing.
           </p>
         </div>
 
-        <p className="mt-4 text-center font-mono text-[10px] uppercase tracking-[0.16em] text-muted-foreground">
+        <p className="mt-4 text-center font-mono text-[11px] uppercase tracking-[0.16em] text-muted-foreground md:text-[12px]">
           Exclusive of Taxes
         </p>
       </div>

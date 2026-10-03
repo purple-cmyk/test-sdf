@@ -143,7 +143,7 @@ export function Join() {
 export function Footer() {
   return (
     <footer className="border-t border-border/60">
-      <div className="mx-auto flex w-full max-w-7xl flex-col items-center justify-between gap-4 px-6 py-8 md:flex-row md:px-10">
+      <div className="mx-auto flex w-full max-w-7xl flex-col items-center justify-between gap-5 px-6 py-8 xl:flex-row xl:gap-4 xl:px-10">
         <div className="flex items-center gap-2.5">
           <img
             src="/sdf.webp"
@@ -155,9 +155,21 @@ export function Footer() {
           </span>
         </div>
 
-        <p className="text-center text-sm text-muted-foreground">
-          Securing tomorrow. Empowering innovators.
-        </p>
+
+        <a
+          href="mailto:contact@societyofdigitalforensic.com"
+          className="group inline-flex max-w-full items-center gap-3 text-left transition-colors hover:text-primary"
+        >
+          <Mail className="h-4 w-4 shrink-0 text-primary" />
+          <span className="flex min-w-0 flex-col">
+            <span className="font-mono text-[10px] uppercase tracking-[0.16em] text-muted-foreground">
+              Contact Us
+            </span>
+            <span className="break-all text-sm text-foreground underline decoration-border underline-offset-4 transition-colors group-hover:decoration-primary sm:break-normal">
+              contact@societyofdigitalforensic.com
+            </span>
+          </span>
+        </a>
 
         <p className="font-mono text-[10px] tracking-[0.2em] text-muted-foreground">
           © {new Date().getFullYear()} @SDF 2026 | All rights reserved.

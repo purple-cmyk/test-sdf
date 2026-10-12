@@ -10,6 +10,7 @@ import {
 import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
+import sdfLogo from "../assets/sdf-logo.png";
 import { reportRuntimeError } from "../lib/runtime-error-reporting";
 
 function NotFoundComponent() {
@@ -92,8 +93,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: appCss,
       },
-      { rel: "icon", href: "/sdf.webp", type: "image/webp" },
-      { rel: "apple-touch-icon", href: "/sdf.webp" },
+      { rel: "icon", href: sdfLogo, type: "image/png" },
+      { rel: "apple-touch-icon", href: sdfLogo },
     ],
   }),
 

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import { AnimatePresence, motion } from "framer-motion";
-import { X, Zap } from "lucide-react";
+import { Linkedin, Mail, Globe, Youtube, X, Zap } from "lucide-react";
 import {
   MagneticLink,
   Reveal,
@@ -185,6 +185,40 @@ export function Speakers() {
 
                   <div className="absolute inset-0 bg-[linear-gradient(to_top,var(--background),transparent_55%)]" />
 
+                  <div className="absolute inset-0 flex items-end bg-black/65 p-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-within:opacity-100 [@media(hover:none)]:opacity-100">
+                    <div className="flex flex-wrap gap-2">
+                      {s.socialLinks.map((link) => {
+                        const Icon =
+                          link.label === "LinkedIn"
+                            ? Linkedin
+                            : link.label === "X"
+                              ? X
+                              : link.label === "YouTube"
+                                ? Youtube
+                                : link.label === "Email"
+                                  ? Mail
+                                  : Globe;
+
+                        return (
+                          <a
+                            key={link.label}
+                            href={link.href}
+                            target={
+                              link.href.startsWith("mailto:")
+                                ? undefined
+                                : "_blank"
+                            }
+                            rel="noopener noreferrer"
+                            aria-label={`${s.name} on ${link.label}`}
+                            title={link.label}
+                            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/30 bg-black/40 text-white transition-colors hover:border-white hover:bg-white/15 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                          >
+                            <Icon aria-hidden="true" className="h-5 w-5" />
+                          </a>
+                        );
+                      })}
+                    </div>
+                  </div>
                 </div>
 
                 <div className="p-5">

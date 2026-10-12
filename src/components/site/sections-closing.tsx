@@ -10,6 +10,7 @@ import {
   Plus,
   Twitter,
 } from "lucide-react";
+import sdfLogo from "@/assets/sdf-logo.png";
 import { MagneticLink, Reveal, Section, SectionHeading } from "./primitives";
 import { sponsors } from "./data";
 
@@ -146,7 +147,7 @@ export function Footer() {
       <div className="mx-auto flex w-full max-w-7xl flex-col items-center justify-between gap-5 px-6 py-8 xl:flex-row xl:gap-4 xl:px-10">
         <div className="flex items-center gap-2.5">
           <img
-            src="/sdf.webp"
+            src={sdfLogo}
             alt="SDF logo"
             className="h-9 w-9 rounded-full object-cover ring-1 ring-border/70"
           />

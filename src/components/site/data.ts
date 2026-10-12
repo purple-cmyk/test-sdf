@@ -1,6 +1,7 @@
 import sakshiSharmaImage from "@/assets/more/_DSC0528.webp";
 import pankajSharmaImage from "@/assets/more/pankaj-sir.webp";
 import santoshKhadsareImage from "@/assets/more/Santosh-Khadsare (1).webp";
+import sdfLogo from "@/assets/sdf-logo.png";
 
 const moreImages = Object.values(
   import.meta.glob("@/assets/more/*.webp", {
@@ -25,12 +26,12 @@ const galleryMeta = [
 ];
 
 export const images = {
-  confStage: moreImages[0] ?? "/sdf.webp",
-  ctf: moreImages[1] ?? "/sdf.webp",
-  workshopImg: moreImages[2] ?? "/sdf.webp",
-  keynote: moreImages[3] ?? "/sdf.webp",
-  networking: moreImages[4] ?? "/sdf.webp",
-  soc: moreImages[5] ?? "/sdf.webp",
+  confStage: moreImages[0] ?? sdfLogo,
+  ctf: moreImages[1] ?? sdfLogo,
+  workshopImg: moreImages[2] ?? sdfLogo,
+  keynote: moreImages[3] ?? sdfLogo,
+  networking: moreImages[4] ?? sdfLogo,
+  soc: moreImages[5] ?? sdfLogo,
 };
 
 export const gallery = moreImages.slice(0, 12).map((src, index) => ({
@@ -56,6 +57,12 @@ export const speakers = [
     img: "/drgauravgupta.webp",
     topic: "CHAIRMAN",
     accent: "primary" as const,
+    socialLinks: [
+      { label: "LinkedIn", href: "https://www.linkedin.com/in/gauravggupta/" },
+      { label: "X", href: "https://x.com/tweetsofgauravg?lang=en" },
+      { label: "YouTube", href: "https://www.youtube.com/c/CyberUnSafe" },
+      { label: "Email", href: "mailto:gauravg@iiitd.ac.in" },
+    ],
   },
   {
     name: "Lt. Col Santosh Khadsare",
@@ -64,6 +71,13 @@ export const speakers = [
     img: santoshKhadsareImage,
     topic: "VICE CHAIRMAN",
     accent: "accent" as const,
+    socialLinks: [
+      {
+        label: "LinkedIn",
+        href: "https://www.linkedin.com/in/santosh-khadsare/?isSelfProfile=false",
+      },
+      { label: "Website", href: "https://www.santoshkhadsare.com/" },
+    ],
   },
   {
     name: "Dr. Pankaj Sharma",
@@ -72,6 +86,12 @@ export const speakers = [
     img: pankajSharmaImage,
     topic: "TREASURER",
     accent: "violet" as const,
+    socialLinks: [
+      {
+        label: "LinkedIn",
+        href: "https://www.linkedin.com/in/dr-pankaj-sharma-96ba2265/",
+      },
+    ],
   },
   {
     name: "Dr. Sakshi Sharma",
@@ -80,6 +100,12 @@ export const speakers = [
     img: sakshiSharmaImage,
     topic: "SECRETARY",
     accent: "primary" as const,
+    socialLinks: [
+      {
+        label: "LinkedIn",
+        href: "https://www.linkedin.com/in/dr-sakshi-sharma-5555216a/",
+      },
+    ],
   },
 ];
 

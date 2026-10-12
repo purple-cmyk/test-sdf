@@ -3,6 +3,7 @@
 // // import { Menu, X } from "lucide-react";
 // // import { MagneticLink } from "./primitives";
 // // import { cn } from "@/lib/utils";
+import sdfLogo from "@/assets/sdf-logo.png";
 
 // // const links = [
 // //   { href: "#about", label: "Society" },
@@ -39,7 +40,7 @@
 // //       >
 // //         <a href="#top" className="group flex items-center gap-2.5" aria-label="Home">
 // //           <img
-// //             src="/sdf.webp"
+// //             src={sdfLogo}
 // //             alt="SDF logo"
 // //             className="h-10 w-10 rounded-full object-cover transition-transform duration-500 group-hover:scale-105 sm:h-12 sm:w-12"
 // //           />
@@ -159,7 +160,7 @@
 //           aria-label="Home"
 //         >
 //           <img
-//             src="/sdf.webp"
+//             src={sdfLogo}
 //             alt="SDF logo"
 //             className="h-10 w-10 rounded-full object-cover transition-transform duration-500 group-hover:scale-105 sm:h-12 sm:w-12"
 //           />
@@ -294,7 +295,7 @@ export function Nav() {
           aria-label="Home"
         >
           <img
-            src="/sdf.webp"
+            src={sdfLogo}
             alt="SDF logo"
             className="h-10 w-10 rounded-full object-cover transition-transform duration-500 group-hover:scale-105 sm:h-12 sm:w-12"
           />

@@ -2,7 +2,7 @@ import { committeeMembers } from "./data";
 import { Footer } from "./sections-closing";
 import { Nav } from "./nav";
 import { ScrollProgress, SmoothScroll } from "./atmosphere";
-import { Reveal, Section, SectionHeading } from "./primitives";
+import { Reveal, Section, SectionHeading, Tilt } from "./primitives";
 
 export function CommitteePage() {
   return (
@@ -43,30 +43,38 @@ export function CommitteePage() {
           <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {committeeMembers.map((member, index) => (
               <Reveal key={member.appointment} delay={index * 0.07}>
-                <article className="group h-full overflow-hidden rounded-sm border border-border bg-background">
-                  <div className="relative aspect-[4/3] overflow-hidden bg-surface">
-                    <img
-                      src={member.image}
-                      alt={`Placeholder portrait for ${member.name}`}
-                      loading="lazy"
-                      decoding="async"
-                      width={900}
-                      height={675}
-                      className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    />
-                    <span className="absolute bottom-3 left-3 rounded-full border border-white/30 bg-black/60 px-3 py-1 font-mono text-[9px] tracking-[0.16em] text-white backdrop-blur">
-                      SAMPLE PORTRAIT
-                    </span>
-                  </div>
-                  <div className="p-5">
-                    <p className="font-mono text-[10px] tracking-[0.18em] text-primary">
-                      {member.appointment.toUpperCase()}
-                    </p>
-                    <h2 className="mt-2 font-display text-xl font-medium tracking-tight">
-                      {member.name}
-                    </h2>
-                  </div>
-                </article>
+                <Tilt className="group h-full">
+                  <article className="relative h-full overflow-hidden rounded-sm border border-border bg-surface/30 transition-[box-shadow,border-color] duration-700 group-hover:border-primary/60 group-hover:shadow-[var(--glow-primary)]">
+                    <div className="relative aspect-[3/4] overflow-hidden rounded-2xl">
+                      <img
+                        src={member.image}
+                        alt={`Placeholder portrait for ${member.name}`}
+                        loading="lazy"
+                        decoding="async"
+                        fetchPriority="low"
+                        width={900}
+                        height={1200}
+                        className="h-full w-full object-cover grayscale-0 brightness-95 transition-[transform,filter] duration-[1400ms] ease-[var(--ease-luxe)] sm:grayscale group-hover:scale-105 group-hover:grayscale-0"
+                      />
+
+                      <div className="absolute inset-0 bg-[linear-gradient(to_top,var(--background),transparent_55%)]" />
+                    </div>
+
+                    <div className="p-5">
+                      <h2 className="font-display text-lg leading-tight font-medium tracking-tight">
+                        {member.name}
+                      </h2>
+
+                      <p className="mt-1.5 text-[13px] text-muted-foreground">
+                        {member.appointment}
+                      </p>
+
+                      <p className="mt-4 font-mono text-[10px] tracking-[0.18em] text-primary">
+                        COMMITTEE MEMBER
+                      </p>
+                    </div>
+                  </article>
+                </Tilt>
               </Reveal>
             ))}
           </div>

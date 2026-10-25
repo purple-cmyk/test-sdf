@@ -4,7 +4,12 @@ import { Nav } from "@/components/site/nav";
 import { Hero } from "@/components/site/hero";
 import { CinematicGallery } from "@/components/site/gallery";
 import { About, Conference } from "@/components/site/sections-core";
-import { Highlights, Speakers, Workshops } from "@/components/site/sections-showcase";
+import {
+  Highlights,
+  SocietyGovernance,
+  Speakers,
+  Workshops,
+} from "@/components/site/sections-showcase";
 import { Footer, Join, Sponsors } from "@/components/site/sections-closing";
 
 const title = "SDF Society of Digital Forensic — SDF Summit 2027";
@@ -39,6 +44,7 @@ function Index() {
         <Highlights />
         <Speakers />
         <Workshops />
+        <SocietyGovernance />
         <Sponsors />
         <Join />
       </main>

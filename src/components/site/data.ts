@@ -109,6 +109,29 @@ export const speakers = [
   },
 ];
 
+export const committeeMembers = [
+  {
+    name: "Sample name 1",
+    appointment: "Chairperson",
+    image: "/drgauravgupta.webp",
+  },
+  {
+    name: "Sample name 2",
+    appointment: "Vice Chairperson",
+    image: santoshKhadsareImage,
+  },
+  {
+    name: "Sample name 3",
+    appointment: "Secretary",
+    image: sakshiSharmaImage,
+  },
+  {
+    name: "Sample name 4",
+    appointment: "Treasurer",
+    image: pankajSharmaImage,
+  },
+];
+
 export const workshops = [
   {
     title: "Promotion of Digital Forensics in India",

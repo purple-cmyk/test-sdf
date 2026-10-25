@@ -10,11 +10,17 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as CommitteeRouteImport } from './routes/committee'
 import { Route as MembershipRouteImport } from './routes/membership'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CommitteeRoute = CommitteeRouteImport.update({
+  id: '/committee',
+  path: '/committee',
   getParentRoute: () => rootRouteImport,
 } as any)
 const MembershipRoute = MembershipRouteImport.update({
@@ -25,27 +31,31 @@ const MembershipRoute = MembershipRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/committee': typeof CommitteeRoute
   '/membership': typeof MembershipRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/committee': typeof CommitteeRoute
   '/membership': typeof MembershipRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/committee': typeof CommitteeRoute
   '/membership': typeof MembershipRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/membership'
+  fullPaths: '/' | '/committee' | '/membership'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/membership'
-  id: '__root__' | '/' | '/membership'
+  to: '/' | '/committee' | '/membership'
+  id: '__root__' | '/' | '/committee' | '/membership'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  CommitteeRoute: typeof CommitteeRoute
   MembershipRoute: typeof MembershipRoute
 }
 
@@ -56,6 +66,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/committee': {
+      id: '/committee'
+      path: '/committee'
+      fullPath: '/committee'
+      preLoaderRoute: typeof CommitteeRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/membership': {
@@ -70,6 +87,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  CommitteeRoute: CommitteeRoute,
   MembershipRoute: MembershipRoute,
 }
 export const routeTree = rootRouteImport

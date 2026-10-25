@@ -18,7 +18,6 @@ import {
   Tilt,
 } from "./primitives";
 import {
-  committeeMembers,
   gallery,
   speakers,
   workshops,
@@ -324,87 +323,33 @@ const initiatives = [
 export function SocietyGovernance() {
   return (
     <Section
-      id="committee"
+      id="initiatives"
       className="border-y border-border/60 bg-surface/20"
     >
       <SectionHeading
         eyebrow="Society"
-        title="Committee Members"
-        description="Meet the Society's committee and explore the work completed and initiatives planned. Sample details and portraits can be replaced with confirmed information."
+        title="Initiatives."
+        description="The Society's planned work to strengthen digital forensics through learning, collaboration, and knowledge sharing."
       />
 
-      <div className="mt-14">
-        <div className="mb-7 flex flex-wrap items-end justify-between gap-3">
-          <div>
-            <p className="eyebrow">Committee</p>
-            <h3 className="mt-2 font-display text-2xl font-medium tracking-tight">
-              Leadership appointments
-            </h3>
-          </div>
-          <p className="max-w-lg text-sm leading-relaxed text-muted-foreground">
-            Names and portraits shown are temporary samples; update them when
-            committee details are confirmed.
-          </p>
-        </div>
-
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {committeeMembers.map((member, index) => (
-            <Reveal key={member.appointment} delay={index * 0.07}>
-              <article className="group overflow-hidden rounded-sm border border-border bg-background/70">
-                <div className="relative aspect-[4/3] overflow-hidden bg-surface">
-                  <img
-                    src={member.image}
-                    alt={`Placeholder portrait for ${member.name}`}
-                    loading="lazy"
-                    decoding="async"
-                    width={900}
-                    height={675}
-                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                  <span className="absolute bottom-3 left-3 rounded-full border border-white/30 bg-black/60 px-3 py-1 font-mono text-[9px] tracking-[0.16em] text-white backdrop-blur">
-                    SAMPLE PORTRAIT
-                  </span>
-                </div>
-                <div className="p-5">
-                  <p className="font-mono text-[10px] tracking-[0.18em] text-primary">
-                    {member.appointment.toUpperCase()}
-                  </p>
-                  <h4 className="mt-2 font-display text-xl font-medium tracking-tight">
-                    {member.name}
-                  </h4>
-                </div>
-              </article>
-            </Reveal>
-          ))}
-        </div>
-      </div>
-
-      <div className="mt-20">
-        <SectionHeading
-          eyebrow="What's next"
-          title="Initiatives."
-          description="The Society's planned work to strengthen digital forensics through learning, collaboration, and knowledge sharing."
-        />
-
-        <div className="mt-10 grid gap-5 md:grid-cols-2">
-          {initiatives.map((initiative, index) => (
-            <Reveal key={initiative.title} delay={index * 0.07}>
-              <article className="glass group flex h-full gap-5 rounded-sm p-6 transition-transform duration-500 hover:-translate-y-1">
-                <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full border border-border bg-background/70 font-mono text-xs text-primary">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-                <div>
-                  <h3 className="font-display text-xl font-medium tracking-tight">
-                    {initiative.title}
-                  </h3>
-                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                    {initiative.description}
-                  </p>
-                </div>
-              </article>
-            </Reveal>
-          ))}
-        </div>
+      <div className="mt-10 grid gap-5 md:grid-cols-2">
+        {initiatives.map((initiative, index) => (
+          <Reveal key={initiative.title} delay={index * 0.07}>
+            <article className="glass group flex h-full gap-5 rounded-sm p-6 transition-transform duration-500 hover:-translate-y-1">
+              <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full border border-border bg-background/70 font-mono text-xs text-primary">
+                {String(index + 1).padStart(2, "0")}
+              </span>
+              <div>
+                <h3 className="font-display text-xl font-medium tracking-tight">
+                  {initiative.title}
+                </h3>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                  {initiative.description}
+                </p>
+              </div>
+            </article>
+          </Reveal>
+        ))}
       </div>
     </Section>
   );

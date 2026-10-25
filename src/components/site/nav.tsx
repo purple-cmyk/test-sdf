@@ -255,11 +255,11 @@ import { MagneticLink } from "./primitives";
 import { cn } from "@/lib/utils";
 
 const links = [
-  { href: "#about", label: "About Society" },
+  { href: "/#about", label: "About Society" },
   { href: "/membership", label: "Membership" },
-  { href: "#highlights", label: "Events" },
-  { href: "#committee", label: "Committee" },
-  { href: "#join", label: "Contact Us" },
+  { href: "/#highlights", label: "Events" },
+  { href: "/committee", label: "Committee" },
+  { href: "/#join", label: "Contact Us" },
 ];
 
 export function Nav() {
@@ -293,7 +293,7 @@ export function Nav() {
       >
         {/* Logo */}
         <a
-          href="#top"
+          href="/"
           className="group flex items-center gap-2.5"
           aria-label="Home"
         >
@@ -340,7 +340,7 @@ export function Nav() {
         <div className="flex items-center gap-2">
           {/* Generic CTA */}
           <MagneticLink
-            href="#workshops"
+            href="/#workshops"
             className="hidden px-5 py-2.5 text-[13px] sm:inline-flex"
           >
             Learn More
@@ -397,7 +397,7 @@ export function Nav() {
 
             {/* Mobile CTA */}
             <a
-              href="#join"
+              href="/#join"
               onClick={() => setOpen(false)}
               className="mt-4 block rounded-full bg-primary px-5 py-3 text-center text-sm font-medium text-primary-foreground"
             >

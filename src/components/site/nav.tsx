@@ -258,7 +258,6 @@ const links = [
   { href: "/#about", label: "About Society" },
   { href: "/membership", label: "Membership" },
   { href: "/#highlights", label: "Events" },
-  { href: "/committee", label: "Committee" },
   { href: "/#join", label: "Contact Us" },
 ];
 

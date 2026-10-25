@@ -6,7 +6,6 @@ import { CinematicGallery } from "@/components/site/gallery";
 import { About, Conference } from "@/components/site/sections-core";
 import {
   Highlights,
-  SocietyGovernance,
   Speakers,
   Workshops,
 } from "@/components/site/sections-showcase";
@@ -44,7 +43,6 @@ function Index() {
         <Highlights />
         <Speakers />
         <Workshops />
-        <SocietyGovernance />
         <Sponsors />
         <Join />
       </main>

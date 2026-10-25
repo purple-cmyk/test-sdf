@@ -246,7 +246,7 @@ const membershipPlans = [
     lifetimeHref: signupFormUrl,
   },
   {
-    type: "Corporate Below ₹50 Lakh",
+    type: "Corporate with Turnover Below ₹50 Lakh",
     details: "For organizations with turnover below ₹50 lakh.",
     yearly: "₹25,000",
     fiveYear: "₹1,00,000",
@@ -256,7 +256,7 @@ const membershipPlans = [
     lifetimeHref: corporateFormUrl,
   },
   {
-    type: "Corporate ₹50 Lakh – ₹1 Crore",
+    type: "Corporate with Turnover ₹50 Lakh – ₹1 Crore",
     details: "For organizations with turnover from ₹50 lakh to ₹1 crore.",
     yearly: "₹50,000",
     fiveYear: "₹2,00,000",
@@ -266,7 +266,7 @@ const membershipPlans = [
     lifetimeHref: corporateFormUrl,
   },
   {
-    type: "Corporate ₹1 – ₹3 Crore",
+    type: "Corporate with Turnover ₹1 – ₹3 Crore",
     details: "For organizations with turnover from ₹1 crore to ₹3 crore.",
     yearly: "₹1,25,000",
     fiveYear: "₹5,00,000",
@@ -276,7 +276,7 @@ const membershipPlans = [
     lifetimeHref: corporateFormUrl,
   },
   {
-    type: "Corporate ₹3 – ₹10 Crore",
+    type: "Corporate with Turnover ₹3 – ₹10 Crore",
     details: "For organizations with turnover from ₹3 crore to ₹10 crore.",
     yearly: "₹2,00,000",
     fiveYear: "₹8,00,000",
@@ -286,7 +286,7 @@ const membershipPlans = [
     lifetimeHref: corporateFormUrl,
   },
   {
-    type: "Corporate ₹10 – ₹50 Crore",
+    type: "Corporate with Turnover ₹10 – ₹50 Crore",
     details: "For organizations with turnover from ₹10 crore to ₹50 crore.",
     yearly: "₹3,00,000",
     fiveYear: "₹12,00,000",
@@ -296,7 +296,7 @@ const membershipPlans = [
     lifetimeHref: corporateFormUrl,
   },
   {
-    type: "Corporate ₹50 – ₹100 Crore",
+    type: "Corporate with Turnover ₹50 – ₹100 Crore",
     details: "For organizations with turnover from ₹50 crore to ₹100 crore.",
     yearly: "₹5,00,000",
     fiveYear: "₹17,50,000",
@@ -306,7 +306,7 @@ const membershipPlans = [
     lifetimeHref: corporateEmailUrl,
   },
   {
-    type: "Corporate ₹100 Crore+",
+    type: "Corporate with Turnover ₹100 Crore+",
     details:
       "Custom institutional partnerships and strategic collaboration terms.",
     yearly: "Custom",

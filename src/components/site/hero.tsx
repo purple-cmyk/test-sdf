@@ -216,9 +216,10 @@
 
 
 
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 import {
   motion,
+  useInView,
   useReducedMotion,
   useScroll,
   useTransform,
@@ -226,12 +227,13 @@ import {
 import { ArrowRight, Lock, Terminal } from "lucide-react";
 import Spline from "@splinetool/react-spline";
 import { MagneticLink, SplitWords } from "./primitives";
-import { ParticleField } from "./atmosphere";
 
 const splineScene =
   "https://prod.spline.design/lDiSr2UkDz7GShFR/scene.splinecode";
 
 function Ticker() {
+  const tickerRef = useRef<HTMLDivElement>(null);
+  const isInView = useInView(tickerRef);
   const items = [
     "ACCEPTING PAPERS FOR 2027",
     "11.9 WG IFIP DIGITAL FORENSIC CONFERENCE",
@@ -240,12 +242,18 @@ function Ticker() {
   ];
 
   return (
-    <div className="absolute inset-x-0 bottom-0 z-20 w-full overflow-hidden border-y border-white/20 bg-slate-950/75 py-3.5 text-white backdrop-blur-md">
+    <div
+      ref={tickerRef}
+      className="absolute inset-x-0 bottom-0 z-20 w-full overflow-hidden border-y border-white/20 bg-slate-950/75 py-3.5 text-white backdrop-blur-md"
+    >
       <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-20 bg-gradient-to-r from-slate-950/75 to-transparent" />
 
       <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-20 bg-gradient-to-l from-slate-950/75 to-transparent" />
 
-      <div className="w-max animate-marquee-slow">
+      <div
+        className="w-max animate-marquee-slow"
+        style={{ animationPlayState: isInView ? "running" : "paused" }}
+      >
         <div className="flex shrink-0">
           {[0, 1, 2, 3].map((k) => (
             <div key={k} className="flex shrink-0">
@@ -269,7 +277,6 @@ function Ticker() {
 export function Hero() {
   const ref = useRef<HTMLElement>(null);
   const reduced = useReducedMotion();
-  const [mounted, setMounted] = useState(false);
 
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -279,22 +286,6 @@ export function Hero() {
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "18%"]);
   const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
   const scale = useTransform(scrollYProgress, [0, 1], [1, 1.04]);
-
-  useEffect(() => {
-    const mediaQuery = window.matchMedia("(max-width: 768px)");
-
-    setMounted(!mediaQuery.matches);
-
-    const handler = (event: MediaQueryListEvent) => {
-      setMounted(!event.matches);
-    };
-
-    mediaQuery.addEventListener("change", handler);
-
-    return () => {
-      mediaQuery.removeEventListener("change", handler);
-    };
-  }, []);
 
   return (
     <section
@@ -344,13 +335,6 @@ export function Hero() {
           backgroundSize: "72px 72px",
         }}
       />
-
-      {/* Atmospheric particles */}
-      {mounted && !reduced ? (
-        <div className="absolute inset-0 z-[4] opacity-40">
-          <ParticleField />
-        </div>
-      ) : null}
 
       {/* Top border */}
       <div
@@ -453,4 +437,3 @@ export function Hero() {
     </section>
   );
 }
-

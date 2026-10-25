@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, useInView } from "framer-motion";
 import {
   ArrowRight,
   Github,
@@ -16,13 +16,22 @@ import { sponsors } from "./data";
 
 /* ---------------------- SECTION 08 — SPONSORS ------------------------- */
 export function Sponsors() {
+  const marqueeRef = useRef<HTMLDivElement>(null);
+  const isInView = useInView(marqueeRef);
+
   return (
     <Section id="sponsors" className="border-y border-border/60 py-24 md:py-32">
       <Reveal>
         <p className="eyebrow text-center">Backed by teams who ship security</p>
       </Reveal>
-      <div className="relative mt-12 overflow-hidden [mask-image:linear-gradient(90deg,transparent,black_12%,black_88%,transparent)]">
-        <div className="flex w-max animate-marquee">
+      <div
+        ref={marqueeRef}
+        className="relative mt-12 overflow-hidden [mask-image:linear-gradient(90deg,transparent,black_12%,black_88%,transparent)]"
+      >
+        <div
+          className="flex w-max animate-marquee"
+          style={{ animationPlayState: isInView ? "running" : "paused" }}
+        >
           {[0, 1].map((k) => (
             <div key={k} className="flex shrink-0">
               {sponsors.map((s) => (

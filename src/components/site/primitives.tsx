@@ -36,6 +36,35 @@ export function Reveal({
   );
 }
 
+export function DeferredImage({
+  className,
+  containerClassName,
+  ...imageProps
+}: ComponentPropsWithoutRef<"img"> & { containerClassName?: string }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref, { once: true });
+
+  return (
+    <div
+      ref={ref}
+      className={cn(
+        "absolute inset-0 overflow-hidden bg-surface",
+        containerClassName,
+      )}
+    >
+      {isInView && imageProps.src ? (
+        <img
+          {...imageProps}
+          loading="lazy"
+          decoding="async"
+          fetchPriority="low"
+          className={cn("h-full w-full object-cover", className)}
+        />
+      ) : null}
+    </div>
+  );
+}
+
 /* ---------------- Split text reveal ---------------- */
 export function SplitWords({
   text,

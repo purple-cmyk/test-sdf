@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import {
   MagneticLink,
+  DeferredImage,
   Reveal,
   Section,
   SectionHeading,
@@ -69,12 +70,9 @@ export function Highlights() {
               aria-label={`Open ${g.title} fullscreen`}
               className="group relative h-full w-full overflow-hidden rounded-sm border border-border text-left"
             >
-              <img
+              <DeferredImage
                 src={g.src}
                 alt={`${g.title}, ${g.location} ${g.year}`}
-                loading="lazy"
-                decoding="async"
-                fetchPriority="low"
                 width={1400}
                 height={1000}
                 className="h-full w-full object-cover brightness-[0.75] drop-shadow-none transition-[transform,filter] duration-[1300ms] ease-[var(--ease-luxe)] group-hover:scale-[1.09] group-hover:brightness-100"

@@ -1,14 +1,33 @@
+import { useEffect, useRef, useState } from "react";
+import { useInView } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, FreeMode } from "swiper/modules";
+import type { Swiper as SwiperInstance } from "swiper";
 import "swiper/css";
 import "swiper/css/free-mode";
 import { gallery } from "./data";
+import { DeferredImage } from "./primitives";
 
 const cinematicGallery = gallery.slice(0, 6);
 
 export function CinematicGallery() {
+  const sectionRef = useRef<HTMLElement>(null);
+  const isInView = useInView(sectionRef);
+  const [swiper, setSwiper] = useState<SwiperInstance | null>(null);
+
+  useEffect(() => {
+    if (!swiper || swiper.destroyed) return;
+    if (isInView) swiper.autoplay.start();
+    else swiper.autoplay.stop();
+  }, [isInView, swiper]);
+
   return (
-    <section id="past-conferences" aria-label="Last year's conference" className="relative py-20 md:py-28">
+    <section
+      ref={sectionRef}
+      id="past-conferences"
+      aria-label="Last year's conference"
+      className="relative py-20 md:py-28"
+    >
       <div className="mx-auto mb-10 flex w-[min(94vw,80rem)] items-end justify-between gap-6 px-1">
         <div>
           <p className="eyebrow">ICDF International Conference on Digital Forensic</p>
@@ -29,22 +48,25 @@ export function CinematicGallery() {
         grabCursor
         freeMode={{ enabled: true, momentum: true, momentumRatio: 0.35 }}
         speed={900}
-        autoplay={{ delay: 2600, disableOnInteraction: false, pauseOnMouseEnter: true }}
+        autoplay={{
+          enabled: false,
+          delay: 2600,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
+        }}
         allowTouchMove
         className="!px-[3vw]"
+        onSwiper={setSwiper}
       >
-        {[...cinematicGallery, ...cinematicGallery].map((item, i) => (
+        {cinematicGallery.map((item, i) => (
           <SwiperSlide
             key={`${item.title}-${i}`}
             className="!w-[78vw] sm:!w-[46vw] lg:!w-[32vw]"
           >
             <figure className="group relative aspect-[4/3] overflow-hidden rounded-sm border border-border bg-background shadow-none">
-              <img
+              <DeferredImage
                 src={item.src}
                 alt={`${item.title} — ${item.location}, ${item.year}`}
-                loading="lazy"
-                decoding="async"
-                fetchPriority="low"
                 width={1400}
                 height={1000}
                 className="h-full w-full scale-[1.04] object-cover brightness-[0.78] saturate-[1.05] drop-shadow-none transition-[transform,filter] duration-[1400ms] ease-[var(--ease-luxe)] group-hover:scale-110 group-hover:brightness-100"

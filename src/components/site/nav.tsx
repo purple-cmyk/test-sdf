@@ -284,8 +284,10 @@ export function Nav() {
       <nav
         aria-label="Primary"
         className={cn(
-          "mx-auto flex w-[min(94vw,80rem)] items-center justify-between rounded-full border border-slate-200 bg-white/90 px-5 py-3 transition-all duration-300",
-          scrolled ? "shadow-sm" : "border-transparent bg-transparent",
+          "mx-auto flex w-[min(94vw,80rem)] items-center justify-between rounded-full border px-5 py-3 transition-all duration-300",
+          scrolled
+            ? "border-slate-200 bg-white/95 text-slate-900 shadow-sm"
+            : "border-white/20 bg-slate-950/65 text-white shadow-lg shadow-black/10 backdrop-blur-xl",
         )}
       >
         {/* Logo */}
@@ -313,11 +315,21 @@ export function Nav() {
             <li key={link.href}>
               <a
                 href={link.href}
-                className="group relative rounded-full px-4 py-2 text-[13px] text-muted-foreground transition-colors duration-300 hover:text-foreground"
+                className={cn(
+                  "group relative rounded-full px-4 py-2 text-[13px] transition-colors duration-300",
+                  scrolled
+                    ? "text-slate-600 hover:text-slate-950"
+                    : "text-white/90 hover:text-white",
+                )}
               >
                 {link.label}
 
-                <span className="absolute inset-x-4 -bottom-0.5 h-px scale-x-0 bg-primary/70 transition-transform duration-500 ease-[var(--ease-luxe)] group-hover:scale-x-100" />
+                <span
+                  className={cn(
+                    "absolute inset-x-4 -bottom-0.5 h-px scale-x-0 transition-transform duration-500 ease-[var(--ease-luxe)] group-hover:scale-x-100",
+                    scrolled ? "bg-primary/70" : "bg-white/80",
+                  )}
+                />
               </a>
             </li>
           ))}
@@ -339,7 +351,12 @@ export function Nav() {
             onClick={() => setOpen((value) => !value)}
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
-            className="grid h-10 w-10 place-items-center rounded-full border border-border text-foreground lg:hidden"
+            className={cn(
+              "grid h-10 w-10 place-items-center rounded-full border lg:hidden",
+              scrolled
+                ? "border-slate-300 text-slate-900"
+                : "border-white/40 text-white",
+            )}
           >
             {open ? (
               <X className="h-4 w-4" />
